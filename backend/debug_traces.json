@@ -1,0 +1,4450 @@
+[
+  {
+    "student_id": "student_0000",
+    "archetype": "Strong Student",
+    "ground_truth": {
+      "category": "CARELESS_ERROR",
+      "specific_cause": null,
+      "affected_skills": [],
+      "secondary_causes": []
+    },
+    "engine_diagnosis": "INSUFFICIENT_EVIDENCE",
+    "engine_confidence": 0.0,
+    "correct": false,
+    "questions_used": 5,
+    "false_diagnosis": false,
+    "insufficient_evidence": true,
+    "questions_asked": [
+      "Expand: 2*(x + 3)",
+      "Expand: 3*(x + 5)",
+      "Expand: 4*(x + 2)",
+      "Expand: 4*(x - 2)",
+      "Expand: 5*(x - 3)"
+    ],
+    "student_responses": [
+      "2*x + 6",
+      "3*x + 15",
+      "4*x + 8",
+      "4*x - 8",
+      "5*x - 15"
+    ],
+    "detected_errors": [],
+    "engine_hypotheses": {},
+    "failure_reason": "Engine failed to reach conclusion within budget."
+  },
+  {
+    "student_id": "student_0001",
+    "archetype": "Distributive Misconception",
+    "ground_truth": {
+      "category": "MISCONCEPTION",
+      "specific_cause": "incomplete_distribution",
+      "affected_skills": [
+        "distributive_property"
+      ],
+      "secondary_causes": []
+    },
+    "engine_diagnosis": "MISCONCEPTION",
+    "engine_confidence": 0.8389261744966443,
+    "correct": true,
+    "questions_used": 5,
+    "false_diagnosis": false,
+    "insufficient_evidence": false,
+    "questions_asked": [
+      "Expand: 2*(x + 3)",
+      "Solve: 2*x + 3 = 11",
+      "Expand: 4*(x - 2)",
+      "Expand: 2*(x + 3)",
+      "Expand: 5*(2*x + 1)"
+    ],
+    "student_responses": [
+      "2*x + 3",
+      "5.0",
+      "4*x - 2",
+      "2*x + 3",
+      "WRONG_INCOMPLETE_DIST"
+    ],
+    "detected_errors": [
+      "incomplete_distribution",
+      "arithmetic_error",
+      "incomplete_distribution",
+      "incomplete_distribution",
+      "incomplete_distribution"
+    ],
+    "engine_hypotheses": {
+      "MISCONCEPTION_incomplete_distribution": 0.8389261744966443,
+      "MISCONCEPTION_sign_negation_error": 0.05369127516778525,
+      "MISCONCEPTION_wrong_operation_order": 0.05369127516778525,
+      "PROCEDURAL_GAP": 0.032214765100671144,
+      "COMPUTATIONAL_ERROR": 0.01073825503355705,
+      "CARELESS_ERROR": 0.01073825503355705
+    },
+    "failure_reason": null
+  },
+  {
+    "student_id": "student_0002",
+    "archetype": "Arithmetic Weakness",
+    "ground_truth": {
+      "category": "COMPUTATIONAL_ERROR",
+      "specific_cause": null,
+      "affected_skills": [
+        "integer_arithmetic"
+      ],
+      "secondary_causes": []
+    },
+    "engine_diagnosis": "INSUFFICIENT_EVIDENCE",
+    "engine_confidence": 0.0,
+    "correct": false,
+    "questions_used": 5,
+    "false_diagnosis": false,
+    "insufficient_evidence": true,
+    "questions_asked": [
+      "Expand: 2*(x + 3)",
+      "Expand: 3*(x + 5)",
+      "Solve: 2*x + 3 = 11",
+      "Expand: 4*(x - 2)",
+      "Expand: -2*(x + 4)"
+    ],
+    "student_responses": [
+      "2*x + 6",
+      "3*x + 1 + 15",
+      "9.0",
+      "4*x + 1 - 8",
+      "-2*x + 1 - 8"
+    ],
+    "detected_errors": [
+      "incomplete_distribution",
+      "arithmetic_error",
+      "unknown_error",
+      "unknown_error"
+    ],
+    "engine_hypotheses": {
+      "MISCONCEPTION_incomplete_distribution": 0.25,
+      "MISCONCEPTION_sign_negation_error": 0.25,
+      "MISCONCEPTION_wrong_operation_order": 0.25,
+      "PROCEDURAL_GAP": 0.15,
+      "COMPUTATIONAL_ERROR": 0.05,
+      "CARELESS_ERROR": 0.05
+    },
+    "failure_reason": "Engine failed to reach conclusion within budget."
+  },
+  {
+    "student_id": "student_0003",
+    "archetype": "Sign Misconception",
+    "ground_truth": {
+      "category": "MISCONCEPTION",
+      "specific_cause": "sign_negation_error",
+      "affected_skills": [
+        "sign_manipulation"
+      ],
+      "secondary_causes": []
+    },
+    "engine_diagnosis": "INSUFFICIENT_EVIDENCE",
+    "engine_confidence": 0.0,
+    "correct": false,
+    "questions_used": 5,
+    "false_diagnosis": false,
+    "insufficient_evidence": true,
+    "questions_asked": [
+      "Expand: 2*(x + 3)",
+      "Expand: 3*(x + 5)",
+      "Solve: 2*x + 3 = 11",
+      "Expand: 2*(x + 3)",
+      "Simplify: 5 - (-3)"
+    ],
+    "student_responses": [
+      "2*x + 6",
+      "3*x + 1 + 15",
+      "4",
+      "2*x + 6",
+      "SIGN_ERROR"
+    ],
+    "detected_errors": [
+      "incomplete_distribution",
+      "sign_error"
+    ],
+    "engine_hypotheses": {
+      "MISCONCEPTION_incomplete_distribution": 0.058479532163742694,
+      "MISCONCEPTION_sign_negation_error": 0.7309941520467835,
+      "MISCONCEPTION_wrong_operation_order": 0.058479532163742694,
+      "PROCEDURAL_GAP": 0.03508771929824561,
+      "COMPUTATIONAL_ERROR": 0.058479532163742694,
+      "CARELESS_ERROR": 0.058479532163742694
+    },
+    "failure_reason": "Engine failed to reach conclusion within budget."
+  },
+  {
+    "student_id": "student_0004",
+    "archetype": "Equation Solving Procedural Gap",
+    "ground_truth": {
+      "category": "PROCEDURAL_GAP",
+      "specific_cause": "wrong_operation_order",
+      "affected_skills": [
+        "linear_equations",
+        "inverse_operations"
+      ],
+      "secondary_causes": []
+    },
+    "engine_diagnosis": "INSUFFICIENT_EVIDENCE",
+    "engine_confidence": 0.0,
+    "correct": false,
+    "questions_used": 5,
+    "false_diagnosis": false,
+    "insufficient_evidence": true,
+    "questions_asked": [
+      "Expand: 2*(x + 3)",
+      "Expand: 3*(x + 5)",
+      "Expand: 4*(x + 2)",
+      "Solve: 2*x + 3 = 11",
+      "Expand: 4*(x - 2)"
+    ],
+    "student_responses": [
+      "2*x + 6",
+      "3*x + 15",
+      "4*x + 1 + 8",
+      "WRONG_OP_ERROR",
+      "4*x - 8"
+    ],
+    "detected_errors": [
+      "unknown_error",
+      "wrong_op_error"
+    ],
+    "engine_hypotheses": {
+      "MISCONCEPTION_incomplete_distribution": 0.041666666666666664,
+      "MISCONCEPTION_sign_negation_error": 0.041666666666666664,
+      "MISCONCEPTION_wrong_operation_order": 0.5208333333333334,
+      "PROCEDURAL_GAP": 0.3125,
+      "COMPUTATIONAL_ERROR": 0.041666666666666664,
+      "CARELESS_ERROR": 0.041666666666666664
+    },
+    "failure_reason": "Engine failed to reach conclusion within budget."
+  },
+  {
+    "student_id": "student_0005",
+    "archetype": "Careless Error Student",
+    "ground_truth": {
+      "category": "CARELESS_ERROR",
+      "specific_cause": null,
+      "affected_skills": [],
+      "secondary_causes": []
+    },
+    "engine_diagnosis": "INSUFFICIENT_EVIDENCE",
+    "engine_confidence": 0.0,
+    "correct": false,
+    "questions_used": 5,
+    "false_diagnosis": false,
+    "insufficient_evidence": true,
+    "questions_asked": [
+      "Expand: 2*(x + 3)",
+      "Expand: 3*(x + 5)",
+      "Expand: 4*(x + 2)",
+      "Solve: 2*x + 3 = 11",
+      "Expand: 2*(x + 3)"
+    ],
+    "student_responses": [
+      "2*x + 6",
+      "3*x + 15",
+      "4*x + 1 + 8",
+      "4",
+      "2*x + 6"
+    ],
+    "detected_errors": [
+      "unknown_error"
+    ],
+    "engine_hypotheses": {
+      "MISCONCEPTION_incomplete_distribution": 0.1041666666666667,
+      "MISCONCEPTION_sign_negation_error": 0.5208333333333334,
+      "MISCONCEPTION_wrong_operation_order": 0.1041666666666667,
+      "PROCEDURAL_GAP": 0.06250000000000001,
+      "COMPUTATIONAL_ERROR": 0.1041666666666667,
+      "CARELESS_ERROR": 0.1041666666666667
+    },
+    "failure_reason": "Engine failed to reach conclusion within budget."
+  },
+  {
+    "student_id": "student_0006",
+    "archetype": "Multiple Weaknesses",
+    "ground_truth": {
+      "category": "CONCEPTUAL_GAP",
+      "specific_cause": null,
+      "affected_skills": [
+        "distributive_property",
+        "integer_arithmetic",
+        "sign_manipulation",
+        "linear_equations",
+        "inverse_operations"
+      ],
+      "secondary_causes": []
+    },
+    "engine_diagnosis": "INSUFFICIENT_EVIDENCE",
+    "engine_confidence": 0.0,
+    "correct": false,
+    "questions_used": 5,
+    "false_diagnosis": false,
+    "insufficient_evidence": true,
+    "questions_asked": [
+      "Expand: 2*(x + 3)",
+      "Expand: 3*(x + 5)",
+      "Solve: 2*x + 3 = 11",
+      "Expand: 4*(x - 2)",
+      "Expand: -2*(x + 4)"
+    ],
+    "student_responses": [
+      "2*x + 6",
+      "3*x + 1 + 15",
+      "8.0",
+      "4*x + 1 - 8",
+      "-2*x + 1 - 8"
+    ],
+    "detected_errors": [
+      "incomplete_distribution",
+      "arithmetic_error",
+      "unknown_error",
+      "unknown_error"
+    ],
+    "engine_hypotheses": {
+      "MISCONCEPTION_incomplete_distribution": 0.25,
+      "MISCONCEPTION_sign_negation_error": 0.25,
+      "MISCONCEPTION_wrong_operation_order": 0.25,
+      "PROCEDURAL_GAP": 0.15,
+      "COMPUTATIONAL_ERROR": 0.05,
+      "CARELESS_ERROR": 0.05
+    },
+    "failure_reason": "Engine failed to reach conclusion within budget."
+  },
+  {
+    "student_id": "student_0007",
+    "archetype": "Insufficient Evidence",
+    "ground_truth": {
+      "category": "INSUFFICIENT_EVIDENCE",
+      "specific_cause": null,
+      "affected_skills": [],
+      "secondary_causes": []
+    },
+    "engine_diagnosis": "INSUFFICIENT_EVIDENCE",
+    "engine_confidence": 0.0,
+    "correct": true,
+    "questions_used": 5,
+    "false_diagnosis": false,
+    "insufficient_evidence": true,
+    "questions_asked": [
+      "Expand: 2*(x + 3)",
+      "Solve: 2*x + 3 = 11",
+      "Expand: 2*(x + 3)",
+      "Expand: 5*(2*x + 1)",
+      "Expand: 4*(x - 2)"
+    ],
+    "student_responses": [
+      "2*x + 1 + 6",
+      "4",
+      "2*x + 1 + 6",
+      "10*x + 1 + 5",
+      "4*x + 1 - 8"
+    ],
+    "detected_errors": [
+      "incomplete_distribution",
+      "incomplete_distribution",
+      "unknown_error",
+      "unknown_error"
+    ],
+    "engine_hypotheses": {
+      "MISCONCEPTION_incomplete_distribution": 0.5924170616113744,
+      "MISCONCEPTION_sign_negation_error": 0.23696682464454974,
+      "MISCONCEPTION_wrong_operation_order": 0.04739336492890995,
+      "PROCEDURAL_GAP": 0.028436018957345967,
+      "COMPUTATIONAL_ERROR": 0.04739336492890995,
+      "CARELESS_ERROR": 0.04739336492890995
+    },
+    "failure_reason": null
+  },
+  {
+    "student_id": "student_0008",
+    "archetype": "Strong Student",
+    "ground_truth": {
+      "category": "CARELESS_ERROR",
+      "specific_cause": null,
+      "affected_skills": [],
+      "secondary_causes": []
+    },
+    "engine_diagnosis": "INSUFFICIENT_EVIDENCE",
+    "engine_confidence": 0.0,
+    "correct": false,
+    "questions_used": 5,
+    "false_diagnosis": false,
+    "insufficient_evidence": true,
+    "questions_asked": [
+      "Expand: 2*(x + 3)",
+      "Expand: 3*(x + 5)",
+      "Expand: 4*(x + 2)",
+      "Expand: 4*(x - 2)",
+      "Solve: 2*x + 3 = 11"
+    ],
+    "student_responses": [
+      "2*x + 6",
+      "3*x + 15",
+      "4*x + 8",
+      "4*x + 1 - 8",
+      "4"
+    ],
+    "detected_errors": [
+      "unknown_error"
+    ],
+    "engine_hypotheses": {
+      "MISCONCEPTION_incomplete_distribution": 0.3676470588235293,
+      "MISCONCEPTION_sign_negation_error": 0.3676470588235293,
+      "MISCONCEPTION_wrong_operation_order": 0.07352941176470587,
+      "PROCEDURAL_GAP": 0.04411764705882352,
+      "COMPUTATIONAL_ERROR": 0.07352941176470587,
+      "CARELESS_ERROR": 0.07352941176470587
+    },
+    "failure_reason": "Engine failed to reach conclusion within budget."
+  },
+  {
+    "student_id": "student_0009",
+    "archetype": "Distributive Misconception",
+    "ground_truth": {
+      "category": "MISCONCEPTION",
+      "specific_cause": "incomplete_distribution",
+      "affected_skills": [
+        "distributive_property"
+      ],
+      "secondary_causes": []
+    },
+    "engine_diagnosis": "MISCONCEPTION",
+    "engine_confidence": 0.8389261744966443,
+    "correct": true,
+    "questions_used": 5,
+    "false_diagnosis": false,
+    "insufficient_evidence": false,
+    "questions_asked": [
+      "Expand: 2*(x + 3)",
+      "Solve: 2*x + 3 = 11",
+      "Expand: 4*(x - 2)",
+      "Expand: 2*(x + 3)",
+      "Expand: 5*(2*x + 1)"
+    ],
+    "student_responses": [
+      "2*x + 3",
+      "6.0",
+      "4*x - 2",
+      "2*x + 3",
+      "WRONG_INCOMPLETE_DIST"
+    ],
+    "detected_errors": [
+      "incomplete_distribution",
+      "arithmetic_error",
+      "incomplete_distribution",
+      "incomplete_distribution",
+      "incomplete_distribution"
+    ],
+    "engine_hypotheses": {
+      "MISCONCEPTION_incomplete_distribution": 0.8389261744966443,
+      "MISCONCEPTION_sign_negation_error": 0.05369127516778525,
+      "MISCONCEPTION_wrong_operation_order": 0.05369127516778525,
+      "PROCEDURAL_GAP": 0.032214765100671144,
+      "COMPUTATIONAL_ERROR": 0.01073825503355705,
+      "CARELESS_ERROR": 0.01073825503355705
+    },
+    "failure_reason": null
+  },
+  {
+    "student_id": "student_0010",
+    "archetype": "Arithmetic Weakness",
+    "ground_truth": {
+      "category": "COMPUTATIONAL_ERROR",
+      "specific_cause": null,
+      "affected_skills": [
+        "integer_arithmetic"
+      ],
+      "secondary_causes": []
+    },
+    "engine_diagnosis": "INSUFFICIENT_EVIDENCE",
+    "engine_confidence": 0.0,
+    "correct": false,
+    "questions_used": 5,
+    "false_diagnosis": false,
+    "insufficient_evidence": true,
+    "questions_asked": [
+      "Expand: 2*(x + 3)",
+      "Solve: 2*x + 3 = 11",
+      "Expand: 4*(x - 2)",
+      "Expand: -2*(x + 4)",
+      "Expand: 2*(x + 3)"
+    ],
+    "student_responses": [
+      "2*x + 1 + 6",
+      "9.0",
+      "4*x + 1 - 8",
+      "-2*x + 1 - 8",
+      "2*x + 1 + 6"
+    ],
+    "detected_errors": [
+      "incomplete_distribution",
+      "arithmetic_error",
+      "unknown_error",
+      "unknown_error",
+      "incomplete_distribution"
+    ],
+    "engine_hypotheses": {
+      "MISCONCEPTION_incomplete_distribution": 0.45454545454545453,
+      "MISCONCEPTION_sign_negation_error": 0.18181818181818182,
+      "MISCONCEPTION_wrong_operation_order": 0.18181818181818182,
+      "PROCEDURAL_GAP": 0.10909090909090909,
+      "COMPUTATIONAL_ERROR": 0.03636363636363637,
+      "CARELESS_ERROR": 0.03636363636363637
+    },
+    "failure_reason": "Engine failed to reach conclusion within budget."
+  },
+  {
+    "student_id": "student_0011",
+    "archetype": "Sign Misconception",
+    "ground_truth": {
+      "category": "MISCONCEPTION",
+      "specific_cause": "sign_negation_error",
+      "affected_skills": [
+        "sign_manipulation"
+      ],
+      "secondary_causes": []
+    },
+    "engine_diagnosis": "MISCONCEPTION",
+    "engine_confidence": 0.8389261744966443,
+    "correct": true,
+    "questions_used": 5,
+    "false_diagnosis": false,
+    "insufficient_evidence": false,
+    "questions_asked": [
+      "Expand: 2*(x + 3)",
+      "Solve: 2*x + 3 = 11",
+      "Expand: 4*(x - 2)",
+      "Simplify: 5 - (-3)",
+      "Simplify: -5 + 3"
+    ],
+    "student_responses": [
+      "2*x + 1 + 6",
+      "8.0",
+      "SIGN_ERROR",
+      "SIGN_ERROR",
+      "SIGN_ERROR"
+    ],
+    "detected_errors": [
+      "incomplete_distribution",
+      "arithmetic_error",
+      "sign_error",
+      "sign_error",
+      "sign_error"
+    ],
+    "engine_hypotheses": {
+      "MISCONCEPTION_incomplete_distribution": 0.05369127516778525,
+      "MISCONCEPTION_sign_negation_error": 0.8389261744966443,
+      "MISCONCEPTION_wrong_operation_order": 0.05369127516778525,
+      "PROCEDURAL_GAP": 0.032214765100671144,
+      "COMPUTATIONAL_ERROR": 0.01073825503355705,
+      "CARELESS_ERROR": 0.01073825503355705
+    },
+    "failure_reason": null
+  },
+  {
+    "student_id": "student_0012",
+    "archetype": "Equation Solving Procedural Gap",
+    "ground_truth": {
+      "category": "PROCEDURAL_GAP",
+      "specific_cause": "wrong_operation_order",
+      "affected_skills": [
+        "linear_equations",
+        "inverse_operations"
+      ],
+      "secondary_causes": []
+    },
+    "engine_diagnosis": "INSUFFICIENT_EVIDENCE",
+    "engine_confidence": 0.0,
+    "correct": false,
+    "questions_used": 5,
+    "false_diagnosis": false,
+    "insufficient_evidence": true,
+    "questions_asked": [
+      "Expand: 2*(x + 3)",
+      "Solve: 2*x + 3 = 11",
+      "Expand: 4*(x - 2)",
+      "Expand: -2*(x + 4)",
+      "Solve: x + 5 = 12"
+    ],
+    "student_responses": [
+      "2*x + 1 + 6",
+      "WRONG_OP_ERROR",
+      "4*x + 1 - 8",
+      "-2*x - 8",
+      "10.0"
+    ],
+    "detected_errors": [
+      "incomplete_distribution",
+      "wrong_op_error",
+      "unknown_error",
+      "arithmetic_error"
+    ],
+    "engine_hypotheses": {
+      "MISCONCEPTION_incomplete_distribution": 0.039215686274509796,
+      "MISCONCEPTION_sign_negation_error": 0.039215686274509796,
+      "MISCONCEPTION_wrong_operation_order": 0.4901960784313725,
+      "PROCEDURAL_GAP": 0.2941176470588235,
+      "COMPUTATIONAL_ERROR": 0.09803921568627448,
+      "CARELESS_ERROR": 0.039215686274509796
+    },
+    "failure_reason": "Engine failed to reach conclusion within budget."
+  },
+  {
+    "student_id": "student_0013",
+    "archetype": "Careless Error Student",
+    "ground_truth": {
+      "category": "CARELESS_ERROR",
+      "specific_cause": null,
+      "affected_skills": [],
+      "secondary_causes": []
+    },
+    "engine_diagnosis": "INSUFFICIENT_EVIDENCE",
+    "engine_confidence": 0.0,
+    "correct": false,
+    "questions_used": 5,
+    "false_diagnosis": false,
+    "insufficient_evidence": true,
+    "questions_asked": [
+      "Expand: 2*(x + 3)",
+      "Expand: 3*(x + 5)",
+      "Expand: 4*(x + 2)",
+      "Solve: 2*x + 3 = 11",
+      "Expand: 4*(x - 2)"
+    ],
+    "student_responses": [
+      "2*x + 6",
+      "3*x + 15",
+      "4*x + 1 + 8",
+      "6.0",
+      "4*x + 1 - 8"
+    ],
+    "detected_errors": [
+      "unknown_error",
+      "arithmetic_error",
+      "unknown_error"
+    ],
+    "engine_hypotheses": {
+      "MISCONCEPTION_incomplete_distribution": 0.25,
+      "MISCONCEPTION_sign_negation_error": 0.25,
+      "MISCONCEPTION_wrong_operation_order": 0.25,
+      "PROCEDURAL_GAP": 0.15,
+      "COMPUTATIONAL_ERROR": 0.05,
+      "CARELESS_ERROR": 0.05
+    },
+    "failure_reason": "Engine failed to reach conclusion within budget."
+  },
+  {
+    "student_id": "student_0014",
+    "archetype": "Multiple Weaknesses",
+    "ground_truth": {
+      "category": "CONCEPTUAL_GAP",
+      "specific_cause": null,
+      "affected_skills": [
+        "distributive_property",
+        "integer_arithmetic",
+        "sign_manipulation",
+        "linear_equations",
+        "inverse_operations"
+      ],
+      "secondary_causes": []
+    },
+    "engine_diagnosis": "INSUFFICIENT_EVIDENCE",
+    "engine_confidence": 0.0,
+    "correct": false,
+    "questions_used": 5,
+    "false_diagnosis": false,
+    "insufficient_evidence": true,
+    "questions_asked": [
+      "Expand: 2*(x + 3)",
+      "Solve: 2*x + 3 = 11",
+      "Expand: 4*(x - 2)",
+      "Expand: -2*(x + 4)",
+      "Expand: 2*(x + 3)"
+    ],
+    "student_responses": [
+      "2*x + 1 + 6",
+      "7.0",
+      "4*x + 1 - 8",
+      "-2*x + 1 - 8",
+      "2*x + 1 + 6"
+    ],
+    "detected_errors": [
+      "incomplete_distribution",
+      "arithmetic_error",
+      "unknown_error",
+      "unknown_error",
+      "incomplete_distribution"
+    ],
+    "engine_hypotheses": {
+      "MISCONCEPTION_incomplete_distribution": 0.45454545454545453,
+      "MISCONCEPTION_sign_negation_error": 0.18181818181818182,
+      "MISCONCEPTION_wrong_operation_order": 0.18181818181818182,
+      "PROCEDURAL_GAP": 0.10909090909090909,
+      "COMPUTATIONAL_ERROR": 0.03636363636363637,
+      "CARELESS_ERROR": 0.03636363636363637
+    },
+    "failure_reason": "Engine failed to reach conclusion within budget."
+  },
+  {
+    "student_id": "student_0015",
+    "archetype": "Insufficient Evidence",
+    "ground_truth": {
+      "category": "INSUFFICIENT_EVIDENCE",
+      "specific_cause": null,
+      "affected_skills": [],
+      "secondary_causes": []
+    },
+    "engine_diagnosis": "INSUFFICIENT_EVIDENCE",
+    "engine_confidence": 0.0,
+    "correct": true,
+    "questions_used": 5,
+    "false_diagnosis": false,
+    "insufficient_evidence": true,
+    "questions_asked": [
+      "Expand: 2*(x + 3)",
+      "Solve: 2*x + 3 = 11",
+      "Expand: 2*(x + 3)",
+      "Expand: 5*(2*x + 1)",
+      "Expand: 4*(x - 2)"
+    ],
+    "student_responses": [
+      "2*x + 1 + 6",
+      "4",
+      "2*x + 1 + 6",
+      "10*x + 1 + 5",
+      "4*x + 1 - 8"
+    ],
+    "detected_errors": [
+      "incomplete_distribution",
+      "incomplete_distribution",
+      "unknown_error",
+      "unknown_error"
+    ],
+    "engine_hypotheses": {
+      "MISCONCEPTION_incomplete_distribution": 0.5924170616113744,
+      "MISCONCEPTION_sign_negation_error": 0.23696682464454974,
+      "MISCONCEPTION_wrong_operation_order": 0.04739336492890995,
+      "PROCEDURAL_GAP": 0.028436018957345967,
+      "COMPUTATIONAL_ERROR": 0.04739336492890995,
+      "CARELESS_ERROR": 0.04739336492890995
+    },
+    "failure_reason": null
+  },
+  {
+    "student_id": "student_0016",
+    "archetype": "Strong Student",
+    "ground_truth": {
+      "category": "CARELESS_ERROR",
+      "specific_cause": null,
+      "affected_skills": [],
+      "secondary_causes": []
+    },
+    "engine_diagnosis": "INSUFFICIENT_EVIDENCE",
+    "engine_confidence": 0.0,
+    "correct": false,
+    "questions_used": 5,
+    "false_diagnosis": false,
+    "insufficient_evidence": true,
+    "questions_asked": [
+      "Expand: 2*(x + 3)",
+      "Expand: 3*(x + 5)",
+      "Expand: 4*(x + 2)",
+      "Expand: 4*(x - 2)",
+      "Expand: 5*(x - 3)"
+    ],
+    "student_responses": [
+      "2*x + 6",
+      "3*x + 15",
+      "4*x + 8",
+      "4*x - 8",
+      "5*x - 15"
+    ],
+    "detected_errors": [],
+    "engine_hypotheses": {},
+    "failure_reason": "Engine failed to reach conclusion within budget."
+  },
+  {
+    "student_id": "student_0017",
+    "archetype": "Distributive Misconception",
+    "ground_truth": {
+      "category": "MISCONCEPTION",
+      "specific_cause": "incomplete_distribution",
+      "affected_skills": [
+        "distributive_property"
+      ],
+      "secondary_causes": []
+    },
+    "engine_diagnosis": "INSUFFICIENT_EVIDENCE",
+    "engine_confidence": 0.0,
+    "correct": false,
+    "questions_used": 5,
+    "false_diagnosis": false,
+    "insufficient_evidence": true,
+    "questions_asked": [
+      "Expand: 2*(x + 3)",
+      "Solve: 2*x + 3 = 11",
+      "Expand: 2*(x + 3)",
+      "Expand: 5*(2*x + 1)",
+      "Expand: 4*(x - 2)"
+    ],
+    "student_responses": [
+      "2*x + 3",
+      "4",
+      "2*x + 1 + 6",
+      "10*x + 1 + 5",
+      "4*x + 1 - 8"
+    ],
+    "detected_errors": [
+      "incomplete_distribution",
+      "incomplete_distribution",
+      "unknown_error",
+      "unknown_error"
+    ],
+    "engine_hypotheses": {
+      "MISCONCEPTION_incomplete_distribution": 0.5924170616113744,
+      "MISCONCEPTION_sign_negation_error": 0.23696682464454974,
+      "MISCONCEPTION_wrong_operation_order": 0.04739336492890995,
+      "PROCEDURAL_GAP": 0.028436018957345967,
+      "COMPUTATIONAL_ERROR": 0.04739336492890995,
+      "CARELESS_ERROR": 0.04739336492890995
+    },
+    "failure_reason": "Engine failed to reach conclusion within budget."
+  },
+  {
+    "student_id": "student_0018",
+    "archetype": "Arithmetic Weakness",
+    "ground_truth": {
+      "category": "COMPUTATIONAL_ERROR",
+      "specific_cause": null,
+      "affected_skills": [
+        "integer_arithmetic"
+      ],
+      "secondary_causes": []
+    },
+    "engine_diagnosis": "INSUFFICIENT_EVIDENCE",
+    "engine_confidence": 0.0,
+    "correct": false,
+    "questions_used": 5,
+    "false_diagnosis": false,
+    "insufficient_evidence": true,
+    "questions_asked": [
+      "Expand: 2*(x + 3)",
+      "Solve: 2*x + 3 = 11",
+      "Expand: 4*(x - 2)",
+      "Expand: -2*(x + 4)",
+      "Solve: x + 5 = 12"
+    ],
+    "student_responses": [
+      "2*x + 1 + 6",
+      "9.0",
+      "4*x + 1 - 8",
+      "-2*x - 8",
+      "11.0"
+    ],
+    "detected_errors": [
+      "incomplete_distribution",
+      "arithmetic_error",
+      "unknown_error",
+      "arithmetic_error"
+    ],
+    "engine_hypotheses": {
+      "MISCONCEPTION_incomplete_distribution": 0.07407407407407408,
+      "MISCONCEPTION_sign_negation_error": 0.07407407407407408,
+      "MISCONCEPTION_wrong_operation_order": 0.3703703703703704,
+      "PROCEDURAL_GAP": 0.2222222222222222,
+      "COMPUTATIONAL_ERROR": 0.1851851851851852,
+      "CARELESS_ERROR": 0.07407407407407408
+    },
+    "failure_reason": "Engine failed to reach conclusion within budget."
+  },
+  {
+    "student_id": "student_0019",
+    "archetype": "Sign Misconception",
+    "ground_truth": {
+      "category": "MISCONCEPTION",
+      "specific_cause": "sign_negation_error",
+      "affected_skills": [
+        "sign_manipulation"
+      ],
+      "secondary_causes": []
+    },
+    "engine_diagnosis": "MISCONCEPTION",
+    "engine_confidence": 0.8389261744966443,
+    "correct": true,
+    "questions_used": 5,
+    "false_diagnosis": false,
+    "insufficient_evidence": false,
+    "questions_asked": [
+      "Expand: 2*(x + 3)",
+      "Solve: 2*x + 3 = 11",
+      "Expand: 4*(x - 2)",
+      "Simplify: 5 - (-3)",
+      "Simplify: -5 + 3"
+    ],
+    "student_responses": [
+      "2*x + 1 + 6",
+      "9.0",
+      "SIGN_ERROR",
+      "SIGN_ERROR",
+      "SIGN_ERROR"
+    ],
+    "detected_errors": [
+      "incomplete_distribution",
+      "arithmetic_error",
+      "sign_error",
+      "sign_error",
+      "sign_error"
+    ],
+    "engine_hypotheses": {
+      "MISCONCEPTION_incomplete_distribution": 0.05369127516778525,
+      "MISCONCEPTION_sign_negation_error": 0.8389261744966443,
+      "MISCONCEPTION_wrong_operation_order": 0.05369127516778525,
+      "PROCEDURAL_GAP": 0.032214765100671144,
+      "COMPUTATIONAL_ERROR": 0.01073825503355705,
+      "CARELESS_ERROR": 0.01073825503355705
+    },
+    "failure_reason": null
+  },
+  {
+    "student_id": "student_0020",
+    "archetype": "Equation Solving Procedural Gap",
+    "ground_truth": {
+      "category": "PROCEDURAL_GAP",
+      "specific_cause": "wrong_operation_order",
+      "affected_skills": [
+        "linear_equations",
+        "inverse_operations"
+      ],
+      "secondary_causes": []
+    },
+    "engine_diagnosis": "INSUFFICIENT_EVIDENCE",
+    "engine_confidence": 0.0,
+    "correct": false,
+    "questions_used": 5,
+    "false_diagnosis": false,
+    "insufficient_evidence": true,
+    "questions_asked": [
+      "Expand: 2*(x + 3)",
+      "Expand: 3*(x + 5)",
+      "Expand: 4*(x + 2)",
+      "Expand: 4*(x - 2)",
+      "Expand: 5*(x - 3)"
+    ],
+    "student_responses": [
+      "2*x + 6",
+      "3*x + 15",
+      "4*x + 8",
+      "4*x - 8",
+      "5*x - 15"
+    ],
+    "detected_errors": [],
+    "engine_hypotheses": {},
+    "failure_reason": "Engine failed to reach conclusion within budget."
+  },
+  {
+    "student_id": "student_0021",
+    "archetype": "Careless Error Student",
+    "ground_truth": {
+      "category": "CARELESS_ERROR",
+      "specific_cause": null,
+      "affected_skills": [],
+      "secondary_causes": []
+    },
+    "engine_diagnosis": "INSUFFICIENT_EVIDENCE",
+    "engine_confidence": 0.0,
+    "correct": false,
+    "questions_used": 5,
+    "false_diagnosis": false,
+    "insufficient_evidence": true,
+    "questions_asked": [
+      "Expand: 2*(x + 3)",
+      "Solve: 2*x + 3 = 11",
+      "Expand: 4*(x - 2)",
+      "Expand: -2*(x + 4)",
+      "Solve: x + 5 = 12"
+    ],
+    "student_responses": [
+      "2*x + 1 + 6",
+      "7.0",
+      "4*x + 1 - 8",
+      "-2*x - 8",
+      "7"
+    ],
+    "detected_errors": [
+      "incomplete_distribution",
+      "arithmetic_error",
+      "unknown_error"
+    ],
+    "engine_hypotheses": {
+      "MISCONCEPTION_incomplete_distribution": 0.11363636363636362,
+      "MISCONCEPTION_sign_negation_error": 0.11363636363636362,
+      "MISCONCEPTION_wrong_operation_order": 0.5681818181818181,
+      "PROCEDURAL_GAP": 0.06818181818181816,
+      "COMPUTATIONAL_ERROR": 0.022727272727272724,
+      "CARELESS_ERROR": 0.11363636363636362
+    },
+    "failure_reason": "Engine failed to reach conclusion within budget."
+  },
+  {
+    "student_id": "student_0022",
+    "archetype": "Multiple Weaknesses",
+    "ground_truth": {
+      "category": "CONCEPTUAL_GAP",
+      "specific_cause": null,
+      "affected_skills": [
+        "distributive_property",
+        "integer_arithmetic",
+        "sign_manipulation",
+        "linear_equations",
+        "inverse_operations"
+      ],
+      "secondary_causes": []
+    },
+    "engine_diagnosis": "INSUFFICIENT_EVIDENCE",
+    "engine_confidence": 0.0,
+    "correct": false,
+    "questions_used": 5,
+    "false_diagnosis": false,
+    "insufficient_evidence": true,
+    "questions_asked": [
+      "Expand: 2*(x + 3)",
+      "Solve: 2*x + 3 = 11",
+      "Expand: 4*(x - 2)",
+      "Expand: -2*(x + 4)",
+      "Expand: 2*(x + 3)"
+    ],
+    "student_responses": [
+      "2*x + 1 + 6",
+      "8.0",
+      "4*x + 1 - 8",
+      "-2*x + 1 - 8",
+      "2*x + 1 + 6"
+    ],
+    "detected_errors": [
+      "incomplete_distribution",
+      "arithmetic_error",
+      "unknown_error",
+      "unknown_error",
+      "incomplete_distribution"
+    ],
+    "engine_hypotheses": {
+      "MISCONCEPTION_incomplete_distribution": 0.45454545454545453,
+      "MISCONCEPTION_sign_negation_error": 0.18181818181818182,
+      "MISCONCEPTION_wrong_operation_order": 0.18181818181818182,
+      "PROCEDURAL_GAP": 0.10909090909090909,
+      "COMPUTATIONAL_ERROR": 0.03636363636363637,
+      "CARELESS_ERROR": 0.03636363636363637
+    },
+    "failure_reason": "Engine failed to reach conclusion within budget."
+  },
+  {
+    "student_id": "student_0023",
+    "archetype": "Insufficient Evidence",
+    "ground_truth": {
+      "category": "INSUFFICIENT_EVIDENCE",
+      "specific_cause": null,
+      "affected_skills": [],
+      "secondary_causes": []
+    },
+    "engine_diagnosis": "INSUFFICIENT_EVIDENCE",
+    "engine_confidence": 0.0,
+    "correct": true,
+    "questions_used": 5,
+    "false_diagnosis": false,
+    "insufficient_evidence": true,
+    "questions_asked": [
+      "Expand: 2*(x + 3)",
+      "Solve: 2*x + 3 = 11",
+      "Expand: 4*(x - 2)",
+      "Expand: -2*(x + 4)",
+      "Solve: x + 5 = 12"
+    ],
+    "student_responses": [
+      "2*x + 1 + 6",
+      "8.0",
+      "4*x + 1 - 8",
+      "-2*x - 8",
+      "7"
+    ],
+    "detected_errors": [
+      "incomplete_distribution",
+      "arithmetic_error",
+      "unknown_error"
+    ],
+    "engine_hypotheses": {
+      "MISCONCEPTION_incomplete_distribution": 0.11363636363636362,
+      "MISCONCEPTION_sign_negation_error": 0.11363636363636362,
+      "MISCONCEPTION_wrong_operation_order": 0.5681818181818181,
+      "PROCEDURAL_GAP": 0.06818181818181816,
+      "COMPUTATIONAL_ERROR": 0.022727272727272724,
+      "CARELESS_ERROR": 0.11363636363636362
+    },
+    "failure_reason": null
+  },
+  {
+    "student_id": "student_0024",
+    "archetype": "Strong Student",
+    "ground_truth": {
+      "category": "CARELESS_ERROR",
+      "specific_cause": null,
+      "affected_skills": [],
+      "secondary_causes": []
+    },
+    "engine_diagnosis": "INSUFFICIENT_EVIDENCE",
+    "engine_confidence": 0.0,
+    "correct": false,
+    "questions_used": 5,
+    "false_diagnosis": false,
+    "insufficient_evidence": true,
+    "questions_asked": [
+      "Expand: 2*(x + 3)",
+      "Expand: 3*(x + 5)",
+      "Expand: 4*(x + 2)",
+      "Expand: 4*(x - 2)",
+      "Expand: 5*(x - 3)"
+    ],
+    "student_responses": [
+      "2*x + 6",
+      "3*x + 15",
+      "4*x + 8",
+      "4*x - 8",
+      "5*x - 15"
+    ],
+    "detected_errors": [],
+    "engine_hypotheses": {},
+    "failure_reason": "Engine failed to reach conclusion within budget."
+  },
+  {
+    "student_id": "student_0025",
+    "archetype": "Distributive Misconception",
+    "ground_truth": {
+      "category": "MISCONCEPTION",
+      "specific_cause": "incomplete_distribution",
+      "affected_skills": [
+        "distributive_property"
+      ],
+      "secondary_causes": []
+    },
+    "engine_diagnosis": "INSUFFICIENT_EVIDENCE",
+    "engine_confidence": 0.0,
+    "correct": false,
+    "questions_used": 5,
+    "false_diagnosis": false,
+    "insufficient_evidence": true,
+    "questions_asked": [
+      "Expand: 2*(x + 3)",
+      "Solve: 2*x + 3 = 11",
+      "Expand: 2*(x + 3)",
+      "Expand: 5*(2*x + 1)",
+      "Expand: 4*(x - 2)"
+    ],
+    "student_responses": [
+      "2*x + 1 + 6",
+      "4",
+      "2*x + 1 + 6",
+      "10*x + 1 + 5",
+      "4*x - 2"
+    ],
+    "detected_errors": [
+      "incomplete_distribution",
+      "incomplete_distribution",
+      "unknown_error",
+      "incomplete_distribution"
+    ],
+    "engine_hypotheses": {
+      "MISCONCEPTION_incomplete_distribution": 0.7841907151819322,
+      "MISCONCEPTION_sign_negation_error": 0.12547051442910914,
+      "MISCONCEPTION_wrong_operation_order": 0.025094102885821826,
+      "PROCEDURAL_GAP": 0.015056461731493095,
+      "COMPUTATIONAL_ERROR": 0.025094102885821826,
+      "CARELESS_ERROR": 0.025094102885821826
+    },
+    "failure_reason": "Engine failed to reach conclusion within budget."
+  },
+  {
+    "student_id": "student_0026",
+    "archetype": "Arithmetic Weakness",
+    "ground_truth": {
+      "category": "COMPUTATIONAL_ERROR",
+      "specific_cause": null,
+      "affected_skills": [
+        "integer_arithmetic"
+      ],
+      "secondary_causes": []
+    },
+    "engine_diagnosis": "INSUFFICIENT_EVIDENCE",
+    "engine_confidence": 0.0,
+    "correct": false,
+    "questions_used": 5,
+    "false_diagnosis": false,
+    "insufficient_evidence": true,
+    "questions_asked": [
+      "Expand: 2*(x + 3)",
+      "Solve: 2*x + 3 = 11",
+      "Expand: 4*(x - 2)",
+      "Expand: -2*(x + 4)",
+      "Expand: 2*(x + 3)"
+    ],
+    "student_responses": [
+      "2*x + 1 + 6",
+      "7.0",
+      "4*x + 1 - 8",
+      "-2*x + 1 - 8",
+      "2*x + 1 + 6"
+    ],
+    "detected_errors": [
+      "incomplete_distribution",
+      "arithmetic_error",
+      "unknown_error",
+      "unknown_error",
+      "incomplete_distribution"
+    ],
+    "engine_hypotheses": {
+      "MISCONCEPTION_incomplete_distribution": 0.45454545454545453,
+      "MISCONCEPTION_sign_negation_error": 0.18181818181818182,
+      "MISCONCEPTION_wrong_operation_order": 0.18181818181818182,
+      "PROCEDURAL_GAP": 0.10909090909090909,
+      "COMPUTATIONAL_ERROR": 0.03636363636363637,
+      "CARELESS_ERROR": 0.03636363636363637
+    },
+    "failure_reason": "Engine failed to reach conclusion within budget."
+  },
+  {
+    "student_id": "student_0027",
+    "archetype": "Sign Misconception",
+    "ground_truth": {
+      "category": "MISCONCEPTION",
+      "specific_cause": "sign_negation_error",
+      "affected_skills": [
+        "sign_manipulation"
+      ],
+      "secondary_causes": []
+    },
+    "engine_diagnosis": "INSUFFICIENT_EVIDENCE",
+    "engine_confidence": 0.0,
+    "correct": false,
+    "questions_used": 5,
+    "false_diagnosis": false,
+    "insufficient_evidence": true,
+    "questions_asked": [
+      "Expand: 2*(x + 3)",
+      "Expand: 3*(x + 5)",
+      "Solve: 2*x + 3 = 11",
+      "Expand: 2*(x + 3)",
+      "Simplify: 5 - (-3)"
+    ],
+    "student_responses": [
+      "2*x + 6",
+      "3*x + 1 + 15",
+      "4",
+      "2*x + 6",
+      "SIGN_ERROR"
+    ],
+    "detected_errors": [
+      "incomplete_distribution",
+      "sign_error"
+    ],
+    "engine_hypotheses": {
+      "MISCONCEPTION_incomplete_distribution": 0.058479532163742694,
+      "MISCONCEPTION_sign_negation_error": 0.7309941520467835,
+      "MISCONCEPTION_wrong_operation_order": 0.058479532163742694,
+      "PROCEDURAL_GAP": 0.03508771929824561,
+      "COMPUTATIONAL_ERROR": 0.058479532163742694,
+      "CARELESS_ERROR": 0.058479532163742694
+    },
+    "failure_reason": "Engine failed to reach conclusion within budget."
+  },
+  {
+    "student_id": "student_0028",
+    "archetype": "Equation Solving Procedural Gap",
+    "ground_truth": {
+      "category": "PROCEDURAL_GAP",
+      "specific_cause": "wrong_operation_order",
+      "affected_skills": [
+        "linear_equations",
+        "inverse_operations"
+      ],
+      "secondary_causes": []
+    },
+    "engine_diagnosis": "INSUFFICIENT_EVIDENCE",
+    "engine_confidence": 0.0,
+    "correct": false,
+    "questions_used": 5,
+    "false_diagnosis": false,
+    "insufficient_evidence": true,
+    "questions_asked": [
+      "Expand: 2*(x + 3)",
+      "Expand: 3*(x + 5)",
+      "Expand: 4*(x + 2)",
+      "Expand: 4*(x - 2)",
+      "Expand: 5*(x - 3)"
+    ],
+    "student_responses": [
+      "2*x + 6",
+      "3*x + 15",
+      "4*x + 8",
+      "4*x - 8",
+      "5*x + 1 - 15"
+    ],
+    "detected_errors": [
+      "unknown_error"
+    ],
+    "engine_hypotheses": {
+      "MISCONCEPTION_incomplete_distribution": 0.25,
+      "MISCONCEPTION_sign_negation_error": 0.25,
+      "MISCONCEPTION_wrong_operation_order": 0.25,
+      "PROCEDURAL_GAP": 0.15,
+      "COMPUTATIONAL_ERROR": 0.05,
+      "CARELESS_ERROR": 0.05
+    },
+    "failure_reason": "Engine failed to reach conclusion within budget."
+  },
+  {
+    "student_id": "student_0029",
+    "archetype": "Careless Error Student",
+    "ground_truth": {
+      "category": "CARELESS_ERROR",
+      "specific_cause": null,
+      "affected_skills": [],
+      "secondary_causes": []
+    },
+    "engine_diagnosis": "INSUFFICIENT_EVIDENCE",
+    "engine_confidence": 0.0,
+    "correct": false,
+    "questions_used": 5,
+    "false_diagnosis": false,
+    "insufficient_evidence": true,
+    "questions_asked": [
+      "Expand: 2*(x + 3)",
+      "Expand: 3*(x + 5)",
+      "Solve: 2*x + 3 = 11",
+      "Expand: 2*(x + 3)",
+      "Simplify: 5 - (-3)"
+    ],
+    "student_responses": [
+      "2*x + 6",
+      "3*x + 1 + 15",
+      "4",
+      "2*x + 6",
+      "12.0"
+    ],
+    "detected_errors": [
+      "incomplete_distribution",
+      "arithmetic_error"
+    ],
+    "engine_hypotheses": {
+      "MISCONCEPTION_incomplete_distribution": 0.10416666666666667,
+      "MISCONCEPTION_sign_negation_error": 0.5208333333333333,
+      "MISCONCEPTION_wrong_operation_order": 0.10416666666666667,
+      "PROCEDURAL_GAP": 0.0625,
+      "COMPUTATIONAL_ERROR": 0.10416666666666667,
+      "CARELESS_ERROR": 0.10416666666666667
+    },
+    "failure_reason": "Engine failed to reach conclusion within budget."
+  },
+  {
+    "student_id": "student_0030",
+    "archetype": "Multiple Weaknesses",
+    "ground_truth": {
+      "category": "CONCEPTUAL_GAP",
+      "specific_cause": null,
+      "affected_skills": [
+        "distributive_property",
+        "integer_arithmetic",
+        "sign_manipulation",
+        "linear_equations",
+        "inverse_operations"
+      ],
+      "secondary_causes": []
+    },
+    "engine_diagnosis": "INSUFFICIENT_EVIDENCE",
+    "engine_confidence": 0.0,
+    "correct": false,
+    "questions_used": 5,
+    "false_diagnosis": false,
+    "insufficient_evidence": true,
+    "questions_asked": [
+      "Expand: 2*(x + 3)",
+      "Solve: 2*x + 3 = 11",
+      "Expand: 4*(x - 2)",
+      "Expand: -2*(x + 4)",
+      "Expand: 2*(x + 3)"
+    ],
+    "student_responses": [
+      "2*x + 1 + 6",
+      "6.0",
+      "4*x + 1 - 8",
+      "-2*x + 1 - 8",
+      "2*x + 6"
+    ],
+    "detected_errors": [
+      "incomplete_distribution",
+      "arithmetic_error",
+      "unknown_error",
+      "unknown_error"
+    ],
+    "engine_hypotheses": {
+      "MISCONCEPTION_incomplete_distribution": 0.06249999999999999,
+      "MISCONCEPTION_sign_negation_error": 0.31249999999999994,
+      "MISCONCEPTION_wrong_operation_order": 0.31249999999999994,
+      "PROCEDURAL_GAP": 0.18749999999999994,
+      "COMPUTATIONAL_ERROR": 0.06249999999999999,
+      "CARELESS_ERROR": 0.06249999999999999
+    },
+    "failure_reason": "Engine failed to reach conclusion within budget."
+  },
+  {
+    "student_id": "student_0031",
+    "archetype": "Insufficient Evidence",
+    "ground_truth": {
+      "category": "INSUFFICIENT_EVIDENCE",
+      "specific_cause": null,
+      "affected_skills": [],
+      "secondary_causes": []
+    },
+    "engine_diagnosis": "INSUFFICIENT_EVIDENCE",
+    "engine_confidence": 0.0,
+    "correct": true,
+    "questions_used": 5,
+    "false_diagnosis": false,
+    "insufficient_evidence": true,
+    "questions_asked": [
+      "Expand: 2*(x + 3)",
+      "Expand: 3*(x + 5)",
+      "Expand: 4*(x + 2)",
+      "Expand: 4*(x - 2)",
+      "Solve: 2*x + 3 = 11"
+    ],
+    "student_responses": [
+      "2*x + 6",
+      "3*x + 15",
+      "4*x + 8",
+      "4*x + 1 - 8",
+      "4"
+    ],
+    "detected_errors": [
+      "unknown_error"
+    ],
+    "engine_hypotheses": {
+      "MISCONCEPTION_incomplete_distribution": 0.3676470588235293,
+      "MISCONCEPTION_sign_negation_error": 0.3676470588235293,
+      "MISCONCEPTION_wrong_operation_order": 0.07352941176470587,
+      "PROCEDURAL_GAP": 0.04411764705882352,
+      "COMPUTATIONAL_ERROR": 0.07352941176470587,
+      "CARELESS_ERROR": 0.07352941176470587
+    },
+    "failure_reason": null
+  },
+  {
+    "student_id": "student_0032",
+    "archetype": "Strong Student",
+    "ground_truth": {
+      "category": "CARELESS_ERROR",
+      "specific_cause": null,
+      "affected_skills": [],
+      "secondary_causes": []
+    },
+    "engine_diagnosis": "INSUFFICIENT_EVIDENCE",
+    "engine_confidence": 0.0,
+    "correct": false,
+    "questions_used": 5,
+    "false_diagnosis": false,
+    "insufficient_evidence": true,
+    "questions_asked": [
+      "Expand: 2*(x + 3)",
+      "Expand: 3*(x + 5)",
+      "Expand: 4*(x + 2)",
+      "Expand: 4*(x - 2)",
+      "Expand: 5*(x - 3)"
+    ],
+    "student_responses": [
+      "2*x + 6",
+      "3*x + 15",
+      "4*x + 8",
+      "4*x - 8",
+      "5*x - 15"
+    ],
+    "detected_errors": [],
+    "engine_hypotheses": {},
+    "failure_reason": "Engine failed to reach conclusion within budget."
+  },
+  {
+    "student_id": "student_0033",
+    "archetype": "Distributive Misconception",
+    "ground_truth": {
+      "category": "MISCONCEPTION",
+      "specific_cause": "incomplete_distribution",
+      "affected_skills": [
+        "distributive_property"
+      ],
+      "secondary_causes": []
+    },
+    "engine_diagnosis": "MISCONCEPTION",
+    "engine_confidence": 0.8389261744966443,
+    "correct": true,
+    "questions_used": 5,
+    "false_diagnosis": false,
+    "insufficient_evidence": false,
+    "questions_asked": [
+      "Expand: 2*(x + 3)",
+      "Solve: 2*x + 3 = 11",
+      "Expand: 4*(x - 2)",
+      "Expand: 2*(x + 3)",
+      "Expand: 5*(2*x + 1)"
+    ],
+    "student_responses": [
+      "2*x + 3",
+      "6.0",
+      "4*x - 2",
+      "2*x + 3",
+      "WRONG_INCOMPLETE_DIST"
+    ],
+    "detected_errors": [
+      "incomplete_distribution",
+      "arithmetic_error",
+      "incomplete_distribution",
+      "incomplete_distribution",
+      "incomplete_distribution"
+    ],
+    "engine_hypotheses": {
+      "MISCONCEPTION_incomplete_distribution": 0.8389261744966443,
+      "MISCONCEPTION_sign_negation_error": 0.05369127516778525,
+      "MISCONCEPTION_wrong_operation_order": 0.05369127516778525,
+      "PROCEDURAL_GAP": 0.032214765100671144,
+      "COMPUTATIONAL_ERROR": 0.01073825503355705,
+      "CARELESS_ERROR": 0.01073825503355705
+    },
+    "failure_reason": null
+  },
+  {
+    "student_id": "student_0034",
+    "archetype": "Arithmetic Weakness",
+    "ground_truth": {
+      "category": "COMPUTATIONAL_ERROR",
+      "specific_cause": null,
+      "affected_skills": [
+        "integer_arithmetic"
+      ],
+      "secondary_causes": []
+    },
+    "engine_diagnosis": "INSUFFICIENT_EVIDENCE",
+    "engine_confidence": 0.0,
+    "correct": false,
+    "questions_used": 5,
+    "false_diagnosis": false,
+    "insufficient_evidence": true,
+    "questions_asked": [
+      "Expand: 2*(x + 3)",
+      "Expand: 3*(x + 5)",
+      "Expand: 4*(x + 2)",
+      "Solve: 2*x + 3 = 11",
+      "Expand: 4*(x - 2)"
+    ],
+    "student_responses": [
+      "2*x + 6",
+      "3*x + 15",
+      "4*x + 1 + 8",
+      "7.0",
+      "4*x + 1 - 8"
+    ],
+    "detected_errors": [
+      "unknown_error",
+      "arithmetic_error",
+      "unknown_error"
+    ],
+    "engine_hypotheses": {
+      "MISCONCEPTION_incomplete_distribution": 0.25,
+      "MISCONCEPTION_sign_negation_error": 0.25,
+      "MISCONCEPTION_wrong_operation_order": 0.25,
+      "PROCEDURAL_GAP": 0.15,
+      "COMPUTATIONAL_ERROR": 0.05,
+      "CARELESS_ERROR": 0.05
+    },
+    "failure_reason": "Engine failed to reach conclusion within budget."
+  },
+  {
+    "student_id": "student_0035",
+    "archetype": "Sign Misconception",
+    "ground_truth": {
+      "category": "MISCONCEPTION",
+      "specific_cause": "sign_negation_error",
+      "affected_skills": [
+        "sign_manipulation"
+      ],
+      "secondary_causes": []
+    },
+    "engine_diagnosis": "INSUFFICIENT_EVIDENCE",
+    "engine_confidence": 0.0,
+    "correct": false,
+    "questions_used": 5,
+    "false_diagnosis": false,
+    "insufficient_evidence": true,
+    "questions_asked": [
+      "Expand: 2*(x + 3)",
+      "Solve: 2*x + 3 = 11",
+      "Expand: 2*(x + 3)",
+      "Expand: 5*(2*x + 1)",
+      "Expand: 4*(x - 2)"
+    ],
+    "student_responses": [
+      "2*x + 1 + 6",
+      "4",
+      "2*x + 1 + 6",
+      "10*x + 1 + 5",
+      "SIGN_ERROR"
+    ],
+    "detected_errors": [
+      "incomplete_distribution",
+      "incomplete_distribution",
+      "unknown_error",
+      "sign_error"
+    ],
+    "engine_hypotheses": {
+      "MISCONCEPTION_incomplete_distribution": 0.437062937062937,
+      "MISCONCEPTION_sign_negation_error": 0.4370629370629369,
+      "MISCONCEPTION_wrong_operation_order": 0.034965034965034954,
+      "PROCEDURAL_GAP": 0.020979020979020973,
+      "COMPUTATIONAL_ERROR": 0.034965034965034954,
+      "CARELESS_ERROR": 0.034965034965034954
+    },
+    "failure_reason": "Engine failed to reach conclusion within budget."
+  },
+  {
+    "student_id": "student_0036",
+    "archetype": "Equation Solving Procedural Gap",
+    "ground_truth": {
+      "category": "PROCEDURAL_GAP",
+      "specific_cause": "wrong_operation_order",
+      "affected_skills": [
+        "linear_equations",
+        "inverse_operations"
+      ],
+      "secondary_causes": []
+    },
+    "engine_diagnosis": "INSUFFICIENT_EVIDENCE",
+    "engine_confidence": 0.0,
+    "correct": false,
+    "questions_used": 5,
+    "false_diagnosis": false,
+    "insufficient_evidence": true,
+    "questions_asked": [
+      "Expand: 2*(x + 3)",
+      "Expand: 3*(x + 5)",
+      "Expand: 4*(x + 2)",
+      "Solve: 2*x + 3 = 11",
+      "Expand: 4*(x - 2)"
+    ],
+    "student_responses": [
+      "2*x + 6",
+      "3*x + 15",
+      "4*x + 1 + 8",
+      "WRONG_OP_ERROR",
+      "4*x - 8"
+    ],
+    "detected_errors": [
+      "unknown_error",
+      "wrong_op_error"
+    ],
+    "engine_hypotheses": {
+      "MISCONCEPTION_incomplete_distribution": 0.041666666666666664,
+      "MISCONCEPTION_sign_negation_error": 0.041666666666666664,
+      "MISCONCEPTION_wrong_operation_order": 0.5208333333333334,
+      "PROCEDURAL_GAP": 0.3125,
+      "COMPUTATIONAL_ERROR": 0.041666666666666664,
+      "CARELESS_ERROR": 0.041666666666666664
+    },
+    "failure_reason": "Engine failed to reach conclusion within budget."
+  },
+  {
+    "student_id": "student_0037",
+    "archetype": "Careless Error Student",
+    "ground_truth": {
+      "category": "CARELESS_ERROR",
+      "specific_cause": null,
+      "affected_skills": [],
+      "secondary_causes": []
+    },
+    "engine_diagnosis": "INSUFFICIENT_EVIDENCE",
+    "engine_confidence": 0.0,
+    "correct": false,
+    "questions_used": 5,
+    "false_diagnosis": false,
+    "insufficient_evidence": true,
+    "questions_asked": [
+      "Expand: 2*(x + 3)",
+      "Solve: 2*x + 3 = 11",
+      "Expand: 2*(x + 3)",
+      "Simplify: 5 - (-3)",
+      "Simplify: -5 + 3"
+    ],
+    "student_responses": [
+      "2*x + 1 + 6",
+      "4",
+      "2*x + 6",
+      "13.0",
+      "-1.0"
+    ],
+    "detected_errors": [
+      "incomplete_distribution",
+      "arithmetic_error",
+      "arithmetic_error"
+    ],
+    "engine_hypotheses": {
+      "MISCONCEPTION_incomplete_distribution": 0.1041666666666667,
+      "MISCONCEPTION_sign_negation_error": 0.5208333333333334,
+      "MISCONCEPTION_wrong_operation_order": 0.1041666666666667,
+      "PROCEDURAL_GAP": 0.06250000000000001,
+      "COMPUTATIONAL_ERROR": 0.1041666666666667,
+      "CARELESS_ERROR": 0.1041666666666667
+    },
+    "failure_reason": "Engine failed to reach conclusion within budget."
+  },
+  {
+    "student_id": "student_0038",
+    "archetype": "Multiple Weaknesses",
+    "ground_truth": {
+      "category": "CONCEPTUAL_GAP",
+      "specific_cause": null,
+      "affected_skills": [
+        "distributive_property",
+        "integer_arithmetic",
+        "sign_manipulation",
+        "linear_equations",
+        "inverse_operations"
+      ],
+      "secondary_causes": []
+    },
+    "engine_diagnosis": "INSUFFICIENT_EVIDENCE",
+    "engine_confidence": 0.0,
+    "correct": false,
+    "questions_used": 5,
+    "false_diagnosis": false,
+    "insufficient_evidence": true,
+    "questions_asked": [
+      "Expand: 2*(x + 3)",
+      "Expand: 3*(x + 5)",
+      "Solve: 2*x + 3 = 11",
+      "Expand: 4*(x - 2)",
+      "Expand: -2*(x + 4)"
+    ],
+    "student_responses": [
+      "2*x + 6",
+      "3*x + 1 + 15",
+      "8.0",
+      "4*x + 1 - 8",
+      "-2*x + 1 - 8"
+    ],
+    "detected_errors": [
+      "incomplete_distribution",
+      "arithmetic_error",
+      "unknown_error",
+      "unknown_error"
+    ],
+    "engine_hypotheses": {
+      "MISCONCEPTION_incomplete_distribution": 0.25,
+      "MISCONCEPTION_sign_negation_error": 0.25,
+      "MISCONCEPTION_wrong_operation_order": 0.25,
+      "PROCEDURAL_GAP": 0.15,
+      "COMPUTATIONAL_ERROR": 0.05,
+      "CARELESS_ERROR": 0.05
+    },
+    "failure_reason": "Engine failed to reach conclusion within budget."
+  },
+  {
+    "student_id": "student_0039",
+    "archetype": "Insufficient Evidence",
+    "ground_truth": {
+      "category": "INSUFFICIENT_EVIDENCE",
+      "specific_cause": null,
+      "affected_skills": [],
+      "secondary_causes": []
+    },
+    "engine_diagnosis": "INSUFFICIENT_EVIDENCE",
+    "engine_confidence": 0.0,
+    "correct": true,
+    "questions_used": 5,
+    "false_diagnosis": false,
+    "insufficient_evidence": true,
+    "questions_asked": [
+      "Expand: 2*(x + 3)",
+      "Solve: 2*x + 3 = 11",
+      "Expand: 4*(x - 2)",
+      "Expand: -2*(x + 4)",
+      "Expand: 2*(x + 3)"
+    ],
+    "student_responses": [
+      "2*x + 1 + 6",
+      "8.0",
+      "4*x + 1 - 8",
+      "-2*x + 1 - 8",
+      "2*x + 1 + 6"
+    ],
+    "detected_errors": [
+      "incomplete_distribution",
+      "arithmetic_error",
+      "unknown_error",
+      "unknown_error",
+      "incomplete_distribution"
+    ],
+    "engine_hypotheses": {
+      "MISCONCEPTION_incomplete_distribution": 0.45454545454545453,
+      "MISCONCEPTION_sign_negation_error": 0.18181818181818182,
+      "MISCONCEPTION_wrong_operation_order": 0.18181818181818182,
+      "PROCEDURAL_GAP": 0.10909090909090909,
+      "COMPUTATIONAL_ERROR": 0.03636363636363637,
+      "CARELESS_ERROR": 0.03636363636363637
+    },
+    "failure_reason": null
+  },
+  {
+    "student_id": "student_0040",
+    "archetype": "Strong Student",
+    "ground_truth": {
+      "category": "CARELESS_ERROR",
+      "specific_cause": null,
+      "affected_skills": [],
+      "secondary_causes": []
+    },
+    "engine_diagnosis": "INSUFFICIENT_EVIDENCE",
+    "engine_confidence": 0.0,
+    "correct": false,
+    "questions_used": 5,
+    "false_diagnosis": false,
+    "insufficient_evidence": true,
+    "questions_asked": [
+      "Expand: 2*(x + 3)",
+      "Expand: 3*(x + 5)",
+      "Expand: 4*(x + 2)",
+      "Expand: 4*(x - 2)",
+      "Expand: 5*(x - 3)"
+    ],
+    "student_responses": [
+      "2*x + 6",
+      "3*x + 15",
+      "4*x + 8",
+      "4*x - 8",
+      "5*x - 15"
+    ],
+    "detected_errors": [],
+    "engine_hypotheses": {},
+    "failure_reason": "Engine failed to reach conclusion within budget."
+  },
+  {
+    "student_id": "student_0041",
+    "archetype": "Distributive Misconception",
+    "ground_truth": {
+      "category": "MISCONCEPTION",
+      "specific_cause": "incomplete_distribution",
+      "affected_skills": [
+        "distributive_property"
+      ],
+      "secondary_causes": []
+    },
+    "engine_diagnosis": "MISCONCEPTION",
+    "engine_confidence": 0.900835975785529,
+    "correct": true,
+    "questions_used": 5,
+    "false_diagnosis": false,
+    "insufficient_evidence": false,
+    "questions_asked": [
+      "Expand: 2*(x + 3)",
+      "Solve: 2*x + 3 = 11",
+      "Expand: 2*(x + 3)",
+      "Expand: 5*(2*x + 1)",
+      "Expand: 4*(x - 2)"
+    ],
+    "student_responses": [
+      "2*x + 1 + 6",
+      "4",
+      "2*x + 3",
+      "WRONG_INCOMPLETE_DIST",
+      "4*x - 2"
+    ],
+    "detected_errors": [
+      "incomplete_distribution",
+      "incomplete_distribution",
+      "incomplete_distribution",
+      "incomplete_distribution"
+    ],
+    "engine_hypotheses": {
+      "MISCONCEPTION_incomplete_distribution": 0.900835975785529,
+      "MISCONCEPTION_sign_negation_error": 0.057653502450273855,
+      "MISCONCEPTION_wrong_operation_order": 0.011530700490054769,
+      "PROCEDURAL_GAP": 0.006918420294032862,
+      "COMPUTATIONAL_ERROR": 0.011530700490054769,
+      "CARELESS_ERROR": 0.011530700490054769
+    },
+    "failure_reason": null
+  },
+  {
+    "student_id": "student_0042",
+    "archetype": "Arithmetic Weakness",
+    "ground_truth": {
+      "category": "COMPUTATIONAL_ERROR",
+      "specific_cause": null,
+      "affected_skills": [
+        "integer_arithmetic"
+      ],
+      "secondary_causes": []
+    },
+    "engine_diagnosis": "INSUFFICIENT_EVIDENCE",
+    "engine_confidence": 0.0,
+    "correct": false,
+    "questions_used": 5,
+    "false_diagnosis": false,
+    "insufficient_evidence": true,
+    "questions_asked": [
+      "Expand: 2*(x + 3)",
+      "Solve: 2*x + 3 = 11",
+      "Expand: 4*(x - 2)",
+      "Expand: -2*(x + 4)",
+      "Expand: 2*(x + 3)"
+    ],
+    "student_responses": [
+      "2*x + 1 + 6",
+      "7.0",
+      "4*x + 1 - 8",
+      "-2*x + 1 - 8",
+      "2*x + 1 + 6"
+    ],
+    "detected_errors": [
+      "incomplete_distribution",
+      "arithmetic_error",
+      "unknown_error",
+      "unknown_error",
+      "incomplete_distribution"
+    ],
+    "engine_hypotheses": {
+      "MISCONCEPTION_incomplete_distribution": 0.45454545454545453,
+      "MISCONCEPTION_sign_negation_error": 0.18181818181818182,
+      "MISCONCEPTION_wrong_operation_order": 0.18181818181818182,
+      "PROCEDURAL_GAP": 0.10909090909090909,
+      "COMPUTATIONAL_ERROR": 0.03636363636363637,
+      "CARELESS_ERROR": 0.03636363636363637
+    },
+    "failure_reason": "Engine failed to reach conclusion within budget."
+  },
+  {
+    "student_id": "student_0043",
+    "archetype": "Sign Misconception",
+    "ground_truth": {
+      "category": "MISCONCEPTION",
+      "specific_cause": "sign_negation_error",
+      "affected_skills": [
+        "sign_manipulation"
+      ],
+      "secondary_causes": []
+    },
+    "engine_diagnosis": "INSUFFICIENT_EVIDENCE",
+    "engine_confidence": 0.0,
+    "correct": false,
+    "questions_used": 5,
+    "false_diagnosis": false,
+    "insufficient_evidence": true,
+    "questions_asked": [
+      "Expand: 2*(x + 3)",
+      "Solve: 2*x + 3 = 11",
+      "Expand: 2*(x + 3)",
+      "Expand: 5*(2*x + 1)",
+      "Simplify: 5 - (-3)"
+    ],
+    "student_responses": [
+      "2*x + 1 + 6",
+      "4",
+      "2*x + 1 + 6",
+      "10*x + 5",
+      "SIGN_ERROR"
+    ],
+    "detected_errors": [
+      "incomplete_distribution",
+      "incomplete_distribution",
+      "sign_error"
+    ],
+    "engine_hypotheses": {
+      "MISCONCEPTION_incomplete_distribution": 0.13440860215053768,
+      "MISCONCEPTION_sign_negation_error": 0.6720430107526882,
+      "MISCONCEPTION_wrong_operation_order": 0.05376344086021507,
+      "PROCEDURAL_GAP": 0.03225806451612903,
+      "COMPUTATIONAL_ERROR": 0.05376344086021507,
+      "CARELESS_ERROR": 0.05376344086021507
+    },
+    "failure_reason": "Engine failed to reach conclusion within budget."
+  },
+  {
+    "student_id": "student_0044",
+    "archetype": "Equation Solving Procedural Gap",
+    "ground_truth": {
+      "category": "PROCEDURAL_GAP",
+      "specific_cause": "wrong_operation_order",
+      "affected_skills": [
+        "linear_equations",
+        "inverse_operations"
+      ],
+      "secondary_causes": []
+    },
+    "engine_diagnosis": "INSUFFICIENT_EVIDENCE",
+    "engine_confidence": 0.0,
+    "correct": false,
+    "questions_used": 5,
+    "false_diagnosis": false,
+    "insufficient_evidence": true,
+    "questions_asked": [
+      "Expand: 2*(x + 3)",
+      "Expand: 3*(x + 5)",
+      "Expand: 4*(x + 2)",
+      "Expand: 4*(x - 2)",
+      "Expand: 5*(x - 3)"
+    ],
+    "student_responses": [
+      "2*x + 6",
+      "3*x + 15",
+      "4*x + 8",
+      "4*x - 8",
+      "5*x + 1 - 15"
+    ],
+    "detected_errors": [
+      "unknown_error"
+    ],
+    "engine_hypotheses": {
+      "MISCONCEPTION_incomplete_distribution": 0.25,
+      "MISCONCEPTION_sign_negation_error": 0.25,
+      "MISCONCEPTION_wrong_operation_order": 0.25,
+      "PROCEDURAL_GAP": 0.15,
+      "COMPUTATIONAL_ERROR": 0.05,
+      "CARELESS_ERROR": 0.05
+    },
+    "failure_reason": "Engine failed to reach conclusion within budget."
+  },
+  {
+    "student_id": "student_0045",
+    "archetype": "Careless Error Student",
+    "ground_truth": {
+      "category": "CARELESS_ERROR",
+      "specific_cause": null,
+      "affected_skills": [],
+      "secondary_causes": []
+    },
+    "engine_diagnosis": "INSUFFICIENT_EVIDENCE",
+    "engine_confidence": 0.0,
+    "correct": false,
+    "questions_used": 5,
+    "false_diagnosis": false,
+    "insufficient_evidence": true,
+    "questions_asked": [
+      "Expand: 2*(x + 3)",
+      "Solve: 2*x + 3 = 11",
+      "Expand: 4*(x - 2)",
+      "Expand: -2*(x + 4)",
+      "Solve: x + 5 = 12"
+    ],
+    "student_responses": [
+      "2*x + 1 + 6",
+      "8.0",
+      "4*x + 1 - 8",
+      "-2*x - 8",
+      "8.0"
+    ],
+    "detected_errors": [
+      "incomplete_distribution",
+      "arithmetic_error",
+      "unknown_error",
+      "arithmetic_error"
+    ],
+    "engine_hypotheses": {
+      "MISCONCEPTION_incomplete_distribution": 0.07407407407407408,
+      "MISCONCEPTION_sign_negation_error": 0.07407407407407408,
+      "MISCONCEPTION_wrong_operation_order": 0.3703703703703704,
+      "PROCEDURAL_GAP": 0.2222222222222222,
+      "COMPUTATIONAL_ERROR": 0.1851851851851852,
+      "CARELESS_ERROR": 0.07407407407407408
+    },
+    "failure_reason": "Engine failed to reach conclusion within budget."
+  },
+  {
+    "student_id": "student_0046",
+    "archetype": "Multiple Weaknesses",
+    "ground_truth": {
+      "category": "CONCEPTUAL_GAP",
+      "specific_cause": null,
+      "affected_skills": [
+        "distributive_property",
+        "integer_arithmetic",
+        "sign_manipulation",
+        "linear_equations",
+        "inverse_operations"
+      ],
+      "secondary_causes": []
+    },
+    "engine_diagnosis": "INSUFFICIENT_EVIDENCE",
+    "engine_confidence": 0.0,
+    "correct": false,
+    "questions_used": 5,
+    "false_diagnosis": false,
+    "insufficient_evidence": true,
+    "questions_asked": [
+      "Expand: 2*(x + 3)",
+      "Solve: 2*x + 3 = 11",
+      "Expand: 4*(x - 2)",
+      "Expand: -2*(x + 4)",
+      "Solve: x + 5 = 12"
+    ],
+    "student_responses": [
+      "2*x + 1 + 6",
+      "9.0",
+      "4*x + 1 - 8",
+      "-2*x - 8",
+      "12.0"
+    ],
+    "detected_errors": [
+      "incomplete_distribution",
+      "arithmetic_error",
+      "unknown_error",
+      "arithmetic_error"
+    ],
+    "engine_hypotheses": {
+      "MISCONCEPTION_incomplete_distribution": 0.07407407407407408,
+      "MISCONCEPTION_sign_negation_error": 0.07407407407407408,
+      "MISCONCEPTION_wrong_operation_order": 0.3703703703703704,
+      "PROCEDURAL_GAP": 0.2222222222222222,
+      "COMPUTATIONAL_ERROR": 0.1851851851851852,
+      "CARELESS_ERROR": 0.07407407407407408
+    },
+    "failure_reason": "Engine failed to reach conclusion within budget."
+  },
+  {
+    "student_id": "student_0047",
+    "archetype": "Insufficient Evidence",
+    "ground_truth": {
+      "category": "INSUFFICIENT_EVIDENCE",
+      "specific_cause": null,
+      "affected_skills": [],
+      "secondary_causes": []
+    },
+    "engine_diagnosis": "INSUFFICIENT_EVIDENCE",
+    "engine_confidence": 0.0,
+    "correct": true,
+    "questions_used": 5,
+    "false_diagnosis": false,
+    "insufficient_evidence": true,
+    "questions_asked": [
+      "Expand: 2*(x + 3)",
+      "Solve: 2*x + 3 = 11",
+      "Expand: 4*(x - 2)",
+      "Expand: -2*(x + 4)",
+      "Expand: 2*(x + 3)"
+    ],
+    "student_responses": [
+      "2*x + 1 + 6",
+      "9.0",
+      "4*x + 1 - 8",
+      "-2*x + 1 - 8",
+      "2*x + 1 + 6"
+    ],
+    "detected_errors": [
+      "incomplete_distribution",
+      "arithmetic_error",
+      "unknown_error",
+      "unknown_error",
+      "incomplete_distribution"
+    ],
+    "engine_hypotheses": {
+      "MISCONCEPTION_incomplete_distribution": 0.45454545454545453,
+      "MISCONCEPTION_sign_negation_error": 0.18181818181818182,
+      "MISCONCEPTION_wrong_operation_order": 0.18181818181818182,
+      "PROCEDURAL_GAP": 0.10909090909090909,
+      "COMPUTATIONAL_ERROR": 0.03636363636363637,
+      "CARELESS_ERROR": 0.03636363636363637
+    },
+    "failure_reason": null
+  },
+  {
+    "student_id": "student_0048",
+    "archetype": "Strong Student",
+    "ground_truth": {
+      "category": "CARELESS_ERROR",
+      "specific_cause": null,
+      "affected_skills": [],
+      "secondary_causes": []
+    },
+    "engine_diagnosis": "INSUFFICIENT_EVIDENCE",
+    "engine_confidence": 0.0,
+    "correct": false,
+    "questions_used": 5,
+    "false_diagnosis": false,
+    "insufficient_evidence": true,
+    "questions_asked": [
+      "Expand: 2*(x + 3)",
+      "Expand: 3*(x + 5)",
+      "Expand: 4*(x + 2)",
+      "Expand: 4*(x - 2)",
+      "Expand: 5*(x - 3)"
+    ],
+    "student_responses": [
+      "2*x + 6",
+      "3*x + 15",
+      "4*x + 8",
+      "4*x - 8",
+      "5*x - 15"
+    ],
+    "detected_errors": [],
+    "engine_hypotheses": {},
+    "failure_reason": "Engine failed to reach conclusion within budget."
+  },
+  {
+    "student_id": "student_0049",
+    "archetype": "Distributive Misconception",
+    "ground_truth": {
+      "category": "MISCONCEPTION",
+      "specific_cause": "incomplete_distribution",
+      "affected_skills": [
+        "distributive_property"
+      ],
+      "secondary_causes": []
+    },
+    "engine_diagnosis": "INSUFFICIENT_EVIDENCE",
+    "engine_confidence": 0.0,
+    "correct": false,
+    "questions_used": 5,
+    "false_diagnosis": false,
+    "insufficient_evidence": true,
+    "questions_asked": [
+      "Expand: 2*(x + 3)",
+      "Solve: 2*x + 3 = 11",
+      "Expand: 4*(x - 2)",
+      "Expand: 2*(x + 3)",
+      "Simplify: 5 - (-3)"
+    ],
+    "student_responses": [
+      "2*x + 3",
+      "5.0",
+      "4*x - 2",
+      "2*x + 6",
+      "WRONG_INCOMPLETE_DIST"
+    ],
+    "detected_errors": [
+      "incomplete_distribution",
+      "arithmetic_error",
+      "incomplete_distribution",
+      "incomplete_distribution"
+    ],
+    "engine_hypotheses": {
+      "MISCONCEPTION_incomplete_distribution": 0.14285714285714285,
+      "MISCONCEPTION_sign_negation_error": 0.2857142857142857,
+      "MISCONCEPTION_wrong_operation_order": 0.2857142857142857,
+      "PROCEDURAL_GAP": 0.1714285714285714,
+      "COMPUTATIONAL_ERROR": 0.05714285714285714,
+      "CARELESS_ERROR": 0.05714285714285714
+    },
+    "failure_reason": "Engine failed to reach conclusion within budget."
+  },
+  {
+    "student_id": "student_0050",
+    "archetype": "Arithmetic Weakness",
+    "ground_truth": {
+      "category": "COMPUTATIONAL_ERROR",
+      "specific_cause": null,
+      "affected_skills": [
+        "integer_arithmetic"
+      ],
+      "secondary_causes": []
+    },
+    "engine_diagnosis": "INSUFFICIENT_EVIDENCE",
+    "engine_confidence": 0.0,
+    "correct": false,
+    "questions_used": 5,
+    "false_diagnosis": false,
+    "insufficient_evidence": true,
+    "questions_asked": [
+      "Expand: 2*(x + 3)",
+      "Solve: 2*x + 3 = 11",
+      "Expand: 4*(x - 2)",
+      "Expand: -2*(x + 4)",
+      "Expand: 2*(x + 3)"
+    ],
+    "student_responses": [
+      "2*x + 1 + 6",
+      "7.0",
+      "4*x + 1 - 8",
+      "-2*x + 1 - 8",
+      "2*x + 1 + 6"
+    ],
+    "detected_errors": [
+      "incomplete_distribution",
+      "arithmetic_error",
+      "unknown_error",
+      "unknown_error",
+      "incomplete_distribution"
+    ],
+    "engine_hypotheses": {
+      "MISCONCEPTION_incomplete_distribution": 0.45454545454545453,
+      "MISCONCEPTION_sign_negation_error": 0.18181818181818182,
+      "MISCONCEPTION_wrong_operation_order": 0.18181818181818182,
+      "PROCEDURAL_GAP": 0.10909090909090909,
+      "COMPUTATIONAL_ERROR": 0.03636363636363637,
+      "CARELESS_ERROR": 0.03636363636363637
+    },
+    "failure_reason": "Engine failed to reach conclusion within budget."
+  },
+  {
+    "student_id": "student_0051",
+    "archetype": "Sign Misconception",
+    "ground_truth": {
+      "category": "MISCONCEPTION",
+      "specific_cause": "sign_negation_error",
+      "affected_skills": [
+        "sign_manipulation"
+      ],
+      "secondary_causes": []
+    },
+    "engine_diagnosis": "INSUFFICIENT_EVIDENCE",
+    "engine_confidence": 0.0,
+    "correct": false,
+    "questions_used": 5,
+    "false_diagnosis": false,
+    "insufficient_evidence": true,
+    "questions_asked": [
+      "Expand: 2*(x + 3)",
+      "Expand: 3*(x + 5)",
+      "Expand: 4*(x + 2)",
+      "Solve: 2*x + 3 = 11",
+      "Expand: 2*(x + 3)"
+    ],
+    "student_responses": [
+      "2*x + 6",
+      "3*x + 15",
+      "4*x + 1 + 8",
+      "4",
+      "2*x + 6"
+    ],
+    "detected_errors": [
+      "unknown_error"
+    ],
+    "engine_hypotheses": {
+      "MISCONCEPTION_incomplete_distribution": 0.1041666666666667,
+      "MISCONCEPTION_sign_negation_error": 0.5208333333333334,
+      "MISCONCEPTION_wrong_operation_order": 0.1041666666666667,
+      "PROCEDURAL_GAP": 0.06250000000000001,
+      "COMPUTATIONAL_ERROR": 0.1041666666666667,
+      "CARELESS_ERROR": 0.1041666666666667
+    },
+    "failure_reason": "Engine failed to reach conclusion within budget."
+  },
+  {
+    "student_id": "student_0052",
+    "archetype": "Equation Solving Procedural Gap",
+    "ground_truth": {
+      "category": "PROCEDURAL_GAP",
+      "specific_cause": "wrong_operation_order",
+      "affected_skills": [
+        "linear_equations",
+        "inverse_operations"
+      ],
+      "secondary_causes": []
+    },
+    "engine_diagnosis": "INSUFFICIENT_EVIDENCE",
+    "engine_confidence": 0.0,
+    "correct": false,
+    "questions_used": 5,
+    "false_diagnosis": false,
+    "insufficient_evidence": true,
+    "questions_asked": [
+      "Expand: 2*(x + 3)",
+      "Expand: 3*(x + 5)",
+      "Expand: 4*(x + 2)",
+      "Expand: 4*(x - 2)",
+      "Expand: 5*(x - 3)"
+    ],
+    "student_responses": [
+      "2*x + 6",
+      "3*x + 15",
+      "4*x + 8",
+      "4*x - 8",
+      "5*x - 15"
+    ],
+    "detected_errors": [],
+    "engine_hypotheses": {},
+    "failure_reason": "Engine failed to reach conclusion within budget."
+  },
+  {
+    "student_id": "student_0053",
+    "archetype": "Careless Error Student",
+    "ground_truth": {
+      "category": "CARELESS_ERROR",
+      "specific_cause": null,
+      "affected_skills": [],
+      "secondary_causes": []
+    },
+    "engine_diagnosis": "INSUFFICIENT_EVIDENCE",
+    "engine_confidence": 0.0,
+    "correct": false,
+    "questions_used": 5,
+    "false_diagnosis": false,
+    "insufficient_evidence": true,
+    "questions_asked": [
+      "Expand: 2*(x + 3)",
+      "Solve: 2*x + 3 = 11",
+      "Expand: 2*(x + 3)",
+      "Expand: 5*(2*x + 1)",
+      "Simplify: 5 - (-3)"
+    ],
+    "student_responses": [
+      "2*x + 1 + 6",
+      "4",
+      "2*x + 1 + 6",
+      "10*x + 5",
+      "10.0"
+    ],
+    "detected_errors": [
+      "incomplete_distribution",
+      "incomplete_distribution",
+      "arithmetic_error"
+    ],
+    "engine_hypotheses": {
+      "MISCONCEPTION_incomplete_distribution": 0.22522522522522526,
+      "MISCONCEPTION_sign_negation_error": 0.45045045045045046,
+      "MISCONCEPTION_wrong_operation_order": 0.0900900900900901,
+      "PROCEDURAL_GAP": 0.05405405405405405,
+      "COMPUTATIONAL_ERROR": 0.0900900900900901,
+      "CARELESS_ERROR": 0.0900900900900901
+    },
+    "failure_reason": "Engine failed to reach conclusion within budget."
+  },
+  {
+    "student_id": "student_0054",
+    "archetype": "Multiple Weaknesses",
+    "ground_truth": {
+      "category": "CONCEPTUAL_GAP",
+      "specific_cause": null,
+      "affected_skills": [
+        "distributive_property",
+        "integer_arithmetic",
+        "sign_manipulation",
+        "linear_equations",
+        "inverse_operations"
+      ],
+      "secondary_causes": []
+    },
+    "engine_diagnosis": "INSUFFICIENT_EVIDENCE",
+    "engine_confidence": 0.0,
+    "correct": false,
+    "questions_used": 5,
+    "false_diagnosis": false,
+    "insufficient_evidence": true,
+    "questions_asked": [
+      "Expand: 2*(x + 3)",
+      "Solve: 2*x + 3 = 11",
+      "Expand: 4*(x - 2)",
+      "Expand: -2*(x + 4)",
+      "Expand: 2*(x + 3)"
+    ],
+    "student_responses": [
+      "2*x + 1 + 6",
+      "5.0",
+      "4*x + 1 - 8",
+      "-2*x + 1 - 8",
+      "2*x + 1 + 6"
+    ],
+    "detected_errors": [
+      "incomplete_distribution",
+      "arithmetic_error",
+      "unknown_error",
+      "unknown_error",
+      "incomplete_distribution"
+    ],
+    "engine_hypotheses": {
+      "MISCONCEPTION_incomplete_distribution": 0.45454545454545453,
+      "MISCONCEPTION_sign_negation_error": 0.18181818181818182,
+      "MISCONCEPTION_wrong_operation_order": 0.18181818181818182,
+      "PROCEDURAL_GAP": 0.10909090909090909,
+      "COMPUTATIONAL_ERROR": 0.03636363636363637,
+      "CARELESS_ERROR": 0.03636363636363637
+    },
+    "failure_reason": "Engine failed to reach conclusion within budget."
+  },
+  {
+    "student_id": "student_0055",
+    "archetype": "Insufficient Evidence",
+    "ground_truth": {
+      "category": "INSUFFICIENT_EVIDENCE",
+      "specific_cause": null,
+      "affected_skills": [],
+      "secondary_causes": []
+    },
+    "engine_diagnosis": "INSUFFICIENT_EVIDENCE",
+    "engine_confidence": 0.0,
+    "correct": true,
+    "questions_used": 5,
+    "false_diagnosis": false,
+    "insufficient_evidence": true,
+    "questions_asked": [
+      "Expand: 2*(x + 3)",
+      "Expand: 3*(x + 5)",
+      "Solve: 2*x + 3 = 11",
+      "Expand: 2*(x + 3)",
+      "Expand: 5*(2*x + 1)"
+    ],
+    "student_responses": [
+      "2*x + 6",
+      "3*x + 1 + 15",
+      "4",
+      "2*x + 1 + 6",
+      "10*x + 5"
+    ],
+    "detected_errors": [
+      "incomplete_distribution",
+      "incomplete_distribution"
+    ],
+    "engine_hypotheses": {
+      "MISCONCEPTION_incomplete_distribution": 0.22522522522522523,
+      "MISCONCEPTION_sign_negation_error": 0.4504504504504504,
+      "MISCONCEPTION_wrong_operation_order": 0.09009009009009009,
+      "PROCEDURAL_GAP": 0.05405405405405404,
+      "COMPUTATIONAL_ERROR": 0.09009009009009009,
+      "CARELESS_ERROR": 0.09009009009009009
+    },
+    "failure_reason": null
+  },
+  {
+    "student_id": "student_0056",
+    "archetype": "Strong Student",
+    "ground_truth": {
+      "category": "CARELESS_ERROR",
+      "specific_cause": null,
+      "affected_skills": [],
+      "secondary_causes": []
+    },
+    "engine_diagnosis": "INSUFFICIENT_EVIDENCE",
+    "engine_confidence": 0.0,
+    "correct": false,
+    "questions_used": 5,
+    "false_diagnosis": false,
+    "insufficient_evidence": true,
+    "questions_asked": [
+      "Expand: 2*(x + 3)",
+      "Expand: 3*(x + 5)",
+      "Expand: 4*(x + 2)",
+      "Expand: 4*(x - 2)",
+      "Expand: 5*(x - 3)"
+    ],
+    "student_responses": [
+      "2*x + 6",
+      "3*x + 15",
+      "4*x + 8",
+      "4*x - 8",
+      "5*x - 15"
+    ],
+    "detected_errors": [],
+    "engine_hypotheses": {},
+    "failure_reason": "Engine failed to reach conclusion within budget."
+  },
+  {
+    "student_id": "student_0057",
+    "archetype": "Distributive Misconception",
+    "ground_truth": {
+      "category": "MISCONCEPTION",
+      "specific_cause": "incomplete_distribution",
+      "affected_skills": [
+        "distributive_property"
+      ],
+      "secondary_causes": []
+    },
+    "engine_diagnosis": "INSUFFICIENT_EVIDENCE",
+    "engine_confidence": 0.0,
+    "correct": false,
+    "questions_used": 5,
+    "false_diagnosis": false,
+    "insufficient_evidence": true,
+    "questions_asked": [
+      "Expand: 2*(x + 3)",
+      "Solve: 2*x + 3 = 11",
+      "Expand: 2*(x + 3)",
+      "Expand: 5*(2*x + 1)",
+      "Expand: 4*(x - 2)"
+    ],
+    "student_responses": [
+      "2*x + 3",
+      "4",
+      "2*x + 3",
+      "10*x + 1 + 5",
+      "4*x - 2"
+    ],
+    "detected_errors": [
+      "incomplete_distribution",
+      "incomplete_distribution",
+      "unknown_error",
+      "incomplete_distribution"
+    ],
+    "engine_hypotheses": {
+      "MISCONCEPTION_incomplete_distribution": 0.7841907151819322,
+      "MISCONCEPTION_sign_negation_error": 0.12547051442910914,
+      "MISCONCEPTION_wrong_operation_order": 0.025094102885821826,
+      "PROCEDURAL_GAP": 0.015056461731493095,
+      "COMPUTATIONAL_ERROR": 0.025094102885821826,
+      "CARELESS_ERROR": 0.025094102885821826
+    },
+    "failure_reason": "Engine failed to reach conclusion within budget."
+  },
+  {
+    "student_id": "student_0058",
+    "archetype": "Arithmetic Weakness",
+    "ground_truth": {
+      "category": "COMPUTATIONAL_ERROR",
+      "specific_cause": null,
+      "affected_skills": [
+        "integer_arithmetic"
+      ],
+      "secondary_causes": []
+    },
+    "engine_diagnosis": "INSUFFICIENT_EVIDENCE",
+    "engine_confidence": 0.0,
+    "correct": false,
+    "questions_used": 5,
+    "false_diagnosis": false,
+    "insufficient_evidence": true,
+    "questions_asked": [
+      "Expand: 2*(x + 3)",
+      "Solve: 2*x + 3 = 11",
+      "Expand: 4*(x - 2)",
+      "Expand: -2*(x + 4)",
+      "Expand: 2*(x + 3)"
+    ],
+    "student_responses": [
+      "2*x + 1 + 6",
+      "9.0",
+      "4*x + 1 - 8",
+      "-2*x + 1 - 8",
+      "2*x + 1 + 6"
+    ],
+    "detected_errors": [
+      "incomplete_distribution",
+      "arithmetic_error",
+      "unknown_error",
+      "unknown_error",
+      "incomplete_distribution"
+    ],
+    "engine_hypotheses": {
+      "MISCONCEPTION_incomplete_distribution": 0.45454545454545453,
+      "MISCONCEPTION_sign_negation_error": 0.18181818181818182,
+      "MISCONCEPTION_wrong_operation_order": 0.18181818181818182,
+      "PROCEDURAL_GAP": 0.10909090909090909,
+      "COMPUTATIONAL_ERROR": 0.03636363636363637,
+      "CARELESS_ERROR": 0.03636363636363637
+    },
+    "failure_reason": "Engine failed to reach conclusion within budget."
+  },
+  {
+    "student_id": "student_0059",
+    "archetype": "Sign Misconception",
+    "ground_truth": {
+      "category": "MISCONCEPTION",
+      "specific_cause": "sign_negation_error",
+      "affected_skills": [
+        "sign_manipulation"
+      ],
+      "secondary_causes": []
+    },
+    "engine_diagnosis": "INSUFFICIENT_EVIDENCE",
+    "engine_confidence": 0.0,
+    "correct": false,
+    "questions_used": 5,
+    "false_diagnosis": false,
+    "insufficient_evidence": true,
+    "questions_asked": [
+      "Expand: 2*(x + 3)",
+      "Solve: 2*x + 3 = 11",
+      "Expand: 2*(x + 3)",
+      "Expand: 5*(2*x + 1)",
+      "Simplify: 5 - (-3)"
+    ],
+    "student_responses": [
+      "2*x + 1 + 6",
+      "4",
+      "2*x + 1 + 6",
+      "10*x + 5",
+      "SIGN_ERROR"
+    ],
+    "detected_errors": [
+      "incomplete_distribution",
+      "incomplete_distribution",
+      "sign_error"
+    ],
+    "engine_hypotheses": {
+      "MISCONCEPTION_incomplete_distribution": 0.13440860215053768,
+      "MISCONCEPTION_sign_negation_error": 0.6720430107526882,
+      "MISCONCEPTION_wrong_operation_order": 0.05376344086021507,
+      "PROCEDURAL_GAP": 0.03225806451612903,
+      "COMPUTATIONAL_ERROR": 0.05376344086021507,
+      "CARELESS_ERROR": 0.05376344086021507
+    },
+    "failure_reason": "Engine failed to reach conclusion within budget."
+  },
+  {
+    "student_id": "student_0060",
+    "archetype": "Equation Solving Procedural Gap",
+    "ground_truth": {
+      "category": "PROCEDURAL_GAP",
+      "specific_cause": "wrong_operation_order",
+      "affected_skills": [
+        "linear_equations",
+        "inverse_operations"
+      ],
+      "secondary_causes": []
+    },
+    "engine_diagnosis": "INSUFFICIENT_EVIDENCE",
+    "engine_confidence": 0.0,
+    "correct": false,
+    "questions_used": 5,
+    "false_diagnosis": false,
+    "insufficient_evidence": true,
+    "questions_asked": [
+      "Expand: 2*(x + 3)",
+      "Expand: 3*(x + 5)",
+      "Expand: 4*(x + 2)",
+      "Expand: 4*(x - 2)",
+      "Expand: 5*(x - 3)"
+    ],
+    "student_responses": [
+      "2*x + 6",
+      "3*x + 15",
+      "4*x + 8",
+      "4*x - 8",
+      "5*x - 15"
+    ],
+    "detected_errors": [],
+    "engine_hypotheses": {},
+    "failure_reason": "Engine failed to reach conclusion within budget."
+  },
+  {
+    "student_id": "student_0061",
+    "archetype": "Careless Error Student",
+    "ground_truth": {
+      "category": "CARELESS_ERROR",
+      "specific_cause": null,
+      "affected_skills": [],
+      "secondary_causes": []
+    },
+    "engine_diagnosis": "INSUFFICIENT_EVIDENCE",
+    "engine_confidence": 0.0,
+    "correct": false,
+    "questions_used": 5,
+    "false_diagnosis": false,
+    "insufficient_evidence": true,
+    "questions_asked": [
+      "Expand: 2*(x + 3)",
+      "Solve: 2*x + 3 = 11",
+      "Expand: 2*(x + 3)",
+      "Simplify: 5 - (-3)",
+      "Expand: 4*(x - 2)"
+    ],
+    "student_responses": [
+      "2*x + 1 + 6",
+      "4",
+      "2*x + 6",
+      "8",
+      "4*x + 1 - 8"
+    ],
+    "detected_errors": [
+      "incomplete_distribution",
+      "unknown_error"
+    ],
+    "engine_hypotheses": {
+      "MISCONCEPTION_incomplete_distribution": 0.17857142857142858,
+      "MISCONCEPTION_sign_negation_error": 0.17857142857142855,
+      "MISCONCEPTION_wrong_operation_order": 0.17857142857142858,
+      "PROCEDURAL_GAP": 0.10714285714285714,
+      "COMPUTATIONAL_ERROR": 0.17857142857142858,
+      "CARELESS_ERROR": 0.17857142857142858
+    },
+    "failure_reason": "Engine failed to reach conclusion within budget."
+  },
+  {
+    "student_id": "student_0062",
+    "archetype": "Multiple Weaknesses",
+    "ground_truth": {
+      "category": "CONCEPTUAL_GAP",
+      "specific_cause": null,
+      "affected_skills": [
+        "distributive_property",
+        "integer_arithmetic",
+        "sign_manipulation",
+        "linear_equations",
+        "inverse_operations"
+      ],
+      "secondary_causes": []
+    },
+    "engine_diagnosis": "INSUFFICIENT_EVIDENCE",
+    "engine_confidence": 0.0,
+    "correct": false,
+    "questions_used": 5,
+    "false_diagnosis": false,
+    "insufficient_evidence": true,
+    "questions_asked": [
+      "Expand: 2*(x + 3)",
+      "Solve: 2*x + 3 = 11",
+      "Expand: 4*(x - 2)",
+      "Solve: x + 5 = 12",
+      "Solve: x - 3 = 10"
+    ],
+    "student_responses": [
+      "2*x + 1 + 6",
+      "5.0",
+      "4*x - 8",
+      "9.0",
+      "18.0"
+    ],
+    "detected_errors": [
+      "incomplete_distribution",
+      "arithmetic_error",
+      "arithmetic_error",
+      "arithmetic_error"
+    ],
+    "engine_hypotheses": {
+      "MISCONCEPTION_incomplete_distribution": 0.057971014492753624,
+      "MISCONCEPTION_sign_negation_error": 0.057971014492753624,
+      "MISCONCEPTION_wrong_operation_order": 0.2898550724637681,
+      "PROCEDURAL_GAP": 0.17391304347826084,
+      "COMPUTATIONAL_ERROR": 0.36231884057971014,
+      "CARELESS_ERROR": 0.057971014492753624
+    },
+    "failure_reason": "Engine failed to reach conclusion within budget."
+  },
+  {
+    "student_id": "student_0063",
+    "archetype": "Insufficient Evidence",
+    "ground_truth": {
+      "category": "INSUFFICIENT_EVIDENCE",
+      "specific_cause": null,
+      "affected_skills": [],
+      "secondary_causes": []
+    },
+    "engine_diagnosis": "INSUFFICIENT_EVIDENCE",
+    "engine_confidence": 0.0,
+    "correct": true,
+    "questions_used": 5,
+    "false_diagnosis": false,
+    "insufficient_evidence": true,
+    "questions_asked": [
+      "Expand: 2*(x + 3)",
+      "Solve: 2*x + 3 = 11",
+      "Expand: 4*(x - 2)",
+      "Expand: -2*(x + 4)",
+      "Solve: x + 5 = 12"
+    ],
+    "student_responses": [
+      "2*x + 1 + 6",
+      "7.0",
+      "4*x + 1 - 8",
+      "-2*x - 8",
+      "9.0"
+    ],
+    "detected_errors": [
+      "incomplete_distribution",
+      "arithmetic_error",
+      "unknown_error",
+      "arithmetic_error"
+    ],
+    "engine_hypotheses": {
+      "MISCONCEPTION_incomplete_distribution": 0.07407407407407408,
+      "MISCONCEPTION_sign_negation_error": 0.07407407407407408,
+      "MISCONCEPTION_wrong_operation_order": 0.3703703703703704,
+      "PROCEDURAL_GAP": 0.2222222222222222,
+      "COMPUTATIONAL_ERROR": 0.1851851851851852,
+      "CARELESS_ERROR": 0.07407407407407408
+    },
+    "failure_reason": null
+  },
+  {
+    "student_id": "student_0064",
+    "archetype": "Strong Student",
+    "ground_truth": {
+      "category": "CARELESS_ERROR",
+      "specific_cause": null,
+      "affected_skills": [],
+      "secondary_causes": []
+    },
+    "engine_diagnosis": "INSUFFICIENT_EVIDENCE",
+    "engine_confidence": 0.0,
+    "correct": false,
+    "questions_used": 5,
+    "false_diagnosis": false,
+    "insufficient_evidence": true,
+    "questions_asked": [
+      "Expand: 2*(x + 3)",
+      "Expand: 3*(x + 5)",
+      "Expand: 4*(x + 2)",
+      "Expand: 4*(x - 2)",
+      "Expand: 5*(x - 3)"
+    ],
+    "student_responses": [
+      "2*x + 6",
+      "3*x + 15",
+      "4*x + 8",
+      "4*x - 8",
+      "5*x - 15"
+    ],
+    "detected_errors": [],
+    "engine_hypotheses": {},
+    "failure_reason": "Engine failed to reach conclusion within budget."
+  },
+  {
+    "student_id": "student_0065",
+    "archetype": "Distributive Misconception",
+    "ground_truth": {
+      "category": "MISCONCEPTION",
+      "specific_cause": "incomplete_distribution",
+      "affected_skills": [
+        "distributive_property"
+      ],
+      "secondary_causes": []
+    },
+    "engine_diagnosis": "MISCONCEPTION",
+    "engine_confidence": 0.8389261744966443,
+    "correct": true,
+    "questions_used": 5,
+    "false_diagnosis": false,
+    "insufficient_evidence": false,
+    "questions_asked": [
+      "Expand: 2*(x + 3)",
+      "Solve: 2*x + 3 = 11",
+      "Expand: 4*(x - 2)",
+      "Expand: 2*(x + 3)",
+      "Expand: 5*(2*x + 1)"
+    ],
+    "student_responses": [
+      "2*x + 1 + 6",
+      "8.0",
+      "4*x - 2",
+      "2*x + 3",
+      "WRONG_INCOMPLETE_DIST"
+    ],
+    "detected_errors": [
+      "incomplete_distribution",
+      "arithmetic_error",
+      "incomplete_distribution",
+      "incomplete_distribution",
+      "incomplete_distribution"
+    ],
+    "engine_hypotheses": {
+      "MISCONCEPTION_incomplete_distribution": 0.8389261744966443,
+      "MISCONCEPTION_sign_negation_error": 0.05369127516778525,
+      "MISCONCEPTION_wrong_operation_order": 0.05369127516778525,
+      "PROCEDURAL_GAP": 0.032214765100671144,
+      "COMPUTATIONAL_ERROR": 0.01073825503355705,
+      "CARELESS_ERROR": 0.01073825503355705
+    },
+    "failure_reason": null
+  },
+  {
+    "student_id": "student_0066",
+    "archetype": "Arithmetic Weakness",
+    "ground_truth": {
+      "category": "COMPUTATIONAL_ERROR",
+      "specific_cause": null,
+      "affected_skills": [
+        "integer_arithmetic"
+      ],
+      "secondary_causes": []
+    },
+    "engine_diagnosis": "INSUFFICIENT_EVIDENCE",
+    "engine_confidence": 0.0,
+    "correct": false,
+    "questions_used": 5,
+    "false_diagnosis": false,
+    "insufficient_evidence": true,
+    "questions_asked": [
+      "Expand: 2*(x + 3)",
+      "Solve: 2*x + 3 = 11",
+      "Expand: 4*(x - 2)",
+      "Expand: -2*(x + 4)",
+      "Expand: 2*(x + 3)"
+    ],
+    "student_responses": [
+      "2*x + 1 + 6",
+      "7.0",
+      "4*x + 1 - 8",
+      "-2*x + 1 - 8",
+      "2*x + 1 + 6"
+    ],
+    "detected_errors": [
+      "incomplete_distribution",
+      "arithmetic_error",
+      "unknown_error",
+      "unknown_error",
+      "incomplete_distribution"
+    ],
+    "engine_hypotheses": {
+      "MISCONCEPTION_incomplete_distribution": 0.45454545454545453,
+      "MISCONCEPTION_sign_negation_error": 0.18181818181818182,
+      "MISCONCEPTION_wrong_operation_order": 0.18181818181818182,
+      "PROCEDURAL_GAP": 0.10909090909090909,
+      "COMPUTATIONAL_ERROR": 0.03636363636363637,
+      "CARELESS_ERROR": 0.03636363636363637
+    },
+    "failure_reason": "Engine failed to reach conclusion within budget."
+  },
+  {
+    "student_id": "student_0067",
+    "archetype": "Sign Misconception",
+    "ground_truth": {
+      "category": "MISCONCEPTION",
+      "specific_cause": "sign_negation_error",
+      "affected_skills": [
+        "sign_manipulation"
+      ],
+      "secondary_causes": []
+    },
+    "engine_diagnosis": "INSUFFICIENT_EVIDENCE",
+    "engine_confidence": 0.0,
+    "correct": false,
+    "questions_used": 5,
+    "false_diagnosis": false,
+    "insufficient_evidence": true,
+    "questions_asked": [
+      "Expand: 2*(x + 3)",
+      "Solve: 2*x + 3 = 11",
+      "Expand: 4*(x - 2)",
+      "Solve: x + 5 = 12",
+      "Solve: 3*x + 5 = 20"
+    ],
+    "student_responses": [
+      "2*x + 1 + 6",
+      "8.0",
+      "4*x - 8",
+      "7",
+      "5"
+    ],
+    "detected_errors": [
+      "incomplete_distribution",
+      "arithmetic_error"
+    ],
+    "engine_hypotheses": {
+      "MISCONCEPTION_incomplete_distribution": 0.23148148148148148,
+      "MISCONCEPTION_sign_negation_error": 0.23148148148148148,
+      "MISCONCEPTION_wrong_operation_order": 0.2314814814814815,
+      "PROCEDURAL_GAP": 0.027777777777777776,
+      "COMPUTATIONAL_ERROR": 0.046296296296296294,
+      "CARELESS_ERROR": 0.23148148148148148
+    },
+    "failure_reason": "Engine failed to reach conclusion within budget."
+  },
+  {
+    "student_id": "student_0068",
+    "archetype": "Equation Solving Procedural Gap",
+    "ground_truth": {
+      "category": "PROCEDURAL_GAP",
+      "specific_cause": "wrong_operation_order",
+      "affected_skills": [
+        "linear_equations",
+        "inverse_operations"
+      ],
+      "secondary_causes": []
+    },
+    "engine_diagnosis": "INSUFFICIENT_EVIDENCE",
+    "engine_confidence": 0.0,
+    "correct": false,
+    "questions_used": 5,
+    "false_diagnosis": false,
+    "insufficient_evidence": true,
+    "questions_asked": [
+      "Expand: 2*(x + 3)",
+      "Expand: 3*(x + 5)",
+      "Expand: 4*(x + 2)",
+      "Expand: 4*(x - 2)",
+      "Expand: 5*(x - 3)"
+    ],
+    "student_responses": [
+      "2*x + 6",
+      "3*x + 15",
+      "4*x + 8",
+      "4*x - 8",
+      "5*x - 15"
+    ],
+    "detected_errors": [],
+    "engine_hypotheses": {},
+    "failure_reason": "Engine failed to reach conclusion within budget."
+  },
+  {
+    "student_id": "student_0069",
+    "archetype": "Careless Error Student",
+    "ground_truth": {
+      "category": "CARELESS_ERROR",
+      "specific_cause": null,
+      "affected_skills": [],
+      "secondary_causes": []
+    },
+    "engine_diagnosis": "INSUFFICIENT_EVIDENCE",
+    "engine_confidence": 0.0,
+    "correct": false,
+    "questions_used": 5,
+    "false_diagnosis": false,
+    "insufficient_evidence": true,
+    "questions_asked": [
+      "Expand: 2*(x + 3)",
+      "Solve: 2*x + 3 = 11",
+      "Expand: 2*(x + 3)",
+      "Simplify: 5 - (-3)",
+      "Simplify: -5 + 3"
+    ],
+    "student_responses": [
+      "2*x + 1 + 6",
+      "4",
+      "2*x + 6",
+      "11.0",
+      "-2"
+    ],
+    "detected_errors": [
+      "incomplete_distribution",
+      "arithmetic_error"
+    ],
+    "engine_hypotheses": {
+      "MISCONCEPTION_incomplete_distribution": 0.17857142857142858,
+      "MISCONCEPTION_sign_negation_error": 0.17857142857142855,
+      "MISCONCEPTION_wrong_operation_order": 0.17857142857142858,
+      "PROCEDURAL_GAP": 0.10714285714285714,
+      "COMPUTATIONAL_ERROR": 0.17857142857142858,
+      "CARELESS_ERROR": 0.17857142857142858
+    },
+    "failure_reason": "Engine failed to reach conclusion within budget."
+  },
+  {
+    "student_id": "student_0070",
+    "archetype": "Multiple Weaknesses",
+    "ground_truth": {
+      "category": "CONCEPTUAL_GAP",
+      "specific_cause": null,
+      "affected_skills": [
+        "distributive_property",
+        "integer_arithmetic",
+        "sign_manipulation",
+        "linear_equations",
+        "inverse_operations"
+      ],
+      "secondary_causes": []
+    },
+    "engine_diagnosis": "INSUFFICIENT_EVIDENCE",
+    "engine_confidence": 0.0,
+    "correct": false,
+    "questions_used": 5,
+    "false_diagnosis": false,
+    "insufficient_evidence": true,
+    "questions_asked": [
+      "Expand: 2*(x + 3)",
+      "Solve: 2*x + 3 = 11",
+      "Expand: 4*(x - 2)",
+      "Expand: -2*(x + 4)",
+      "Expand: 2*(x + 3)"
+    ],
+    "student_responses": [
+      "2*x + 1 + 6",
+      "6.0",
+      "4*x + 1 - 8",
+      "-2*x + 1 - 8",
+      "2*x + 6"
+    ],
+    "detected_errors": [
+      "incomplete_distribution",
+      "arithmetic_error",
+      "unknown_error",
+      "unknown_error"
+    ],
+    "engine_hypotheses": {
+      "MISCONCEPTION_incomplete_distribution": 0.06249999999999999,
+      "MISCONCEPTION_sign_negation_error": 0.31249999999999994,
+      "MISCONCEPTION_wrong_operation_order": 0.31249999999999994,
+      "PROCEDURAL_GAP": 0.18749999999999994,
+      "COMPUTATIONAL_ERROR": 0.06249999999999999,
+      "CARELESS_ERROR": 0.06249999999999999
+    },
+    "failure_reason": "Engine failed to reach conclusion within budget."
+  },
+  {
+    "student_id": "student_0071",
+    "archetype": "Insufficient Evidence",
+    "ground_truth": {
+      "category": "INSUFFICIENT_EVIDENCE",
+      "specific_cause": null,
+      "affected_skills": [],
+      "secondary_causes": []
+    },
+    "engine_diagnosis": "INSUFFICIENT_EVIDENCE",
+    "engine_confidence": 0.0,
+    "correct": true,
+    "questions_used": 5,
+    "false_diagnosis": false,
+    "insufficient_evidence": true,
+    "questions_asked": [
+      "Expand: 2*(x + 3)",
+      "Expand: 3*(x + 5)",
+      "Solve: 2*x + 3 = 11",
+      "Expand: 2*(x + 3)",
+      "Simplify: 5 - (-3)"
+    ],
+    "student_responses": [
+      "2*x + 6",
+      "3*x + 1 + 15",
+      "4",
+      "2*x + 6",
+      "8"
+    ],
+    "detected_errors": [
+      "incomplete_distribution"
+    ],
+    "engine_hypotheses": {
+      "MISCONCEPTION_incomplete_distribution": 0.17857142857142858,
+      "MISCONCEPTION_sign_negation_error": 0.17857142857142855,
+      "MISCONCEPTION_wrong_operation_order": 0.17857142857142858,
+      "PROCEDURAL_GAP": 0.10714285714285714,
+      "COMPUTATIONAL_ERROR": 0.17857142857142858,
+      "CARELESS_ERROR": 0.17857142857142858
+    },
+    "failure_reason": null
+  },
+  {
+    "student_id": "student_0072",
+    "archetype": "Strong Student",
+    "ground_truth": {
+      "category": "CARELESS_ERROR",
+      "specific_cause": null,
+      "affected_skills": [],
+      "secondary_causes": []
+    },
+    "engine_diagnosis": "INSUFFICIENT_EVIDENCE",
+    "engine_confidence": 0.0,
+    "correct": false,
+    "questions_used": 5,
+    "false_diagnosis": false,
+    "insufficient_evidence": true,
+    "questions_asked": [
+      "Expand: 2*(x + 3)",
+      "Expand: 3*(x + 5)",
+      "Expand: 4*(x + 2)",
+      "Expand: 4*(x - 2)",
+      "Expand: 5*(x - 3)"
+    ],
+    "student_responses": [
+      "2*x + 6",
+      "3*x + 15",
+      "4*x + 8",
+      "4*x - 8",
+      "5*x + 1 - 15"
+    ],
+    "detected_errors": [
+      "unknown_error"
+    ],
+    "engine_hypotheses": {
+      "MISCONCEPTION_incomplete_distribution": 0.25,
+      "MISCONCEPTION_sign_negation_error": 0.25,
+      "MISCONCEPTION_wrong_operation_order": 0.25,
+      "PROCEDURAL_GAP": 0.15,
+      "COMPUTATIONAL_ERROR": 0.05,
+      "CARELESS_ERROR": 0.05
+    },
+    "failure_reason": "Engine failed to reach conclusion within budget."
+  },
+  {
+    "student_id": "student_0073",
+    "archetype": "Distributive Misconception",
+    "ground_truth": {
+      "category": "MISCONCEPTION",
+      "specific_cause": "incomplete_distribution",
+      "affected_skills": [
+        "distributive_property"
+      ],
+      "secondary_causes": []
+    },
+    "engine_diagnosis": "MISCONCEPTION",
+    "engine_confidence": 0.8389261744966443,
+    "correct": true,
+    "questions_used": 5,
+    "false_diagnosis": false,
+    "insufficient_evidence": false,
+    "questions_asked": [
+      "Expand: 2*(x + 3)",
+      "Solve: 2*x + 3 = 11",
+      "Expand: 4*(x - 2)",
+      "Expand: 2*(x + 3)",
+      "Expand: 5*(2*x + 1)"
+    ],
+    "student_responses": [
+      "2*x + 3",
+      "9.0",
+      "4*x - 2",
+      "2*x + 1 + 6",
+      "WRONG_INCOMPLETE_DIST"
+    ],
+    "detected_errors": [
+      "incomplete_distribution",
+      "arithmetic_error",
+      "incomplete_distribution",
+      "incomplete_distribution",
+      "incomplete_distribution"
+    ],
+    "engine_hypotheses": {
+      "MISCONCEPTION_incomplete_distribution": 0.8389261744966443,
+      "MISCONCEPTION_sign_negation_error": 0.05369127516778525,
+      "MISCONCEPTION_wrong_operation_order": 0.05369127516778525,
+      "PROCEDURAL_GAP": 0.032214765100671144,
+      "COMPUTATIONAL_ERROR": 0.01073825503355705,
+      "CARELESS_ERROR": 0.01073825503355705
+    },
+    "failure_reason": null
+  },
+  {
+    "student_id": "student_0074",
+    "archetype": "Arithmetic Weakness",
+    "ground_truth": {
+      "category": "COMPUTATIONAL_ERROR",
+      "specific_cause": null,
+      "affected_skills": [
+        "integer_arithmetic"
+      ],
+      "secondary_causes": []
+    },
+    "engine_diagnosis": "INSUFFICIENT_EVIDENCE",
+    "engine_confidence": 0.0,
+    "correct": false,
+    "questions_used": 5,
+    "false_diagnosis": false,
+    "insufficient_evidence": true,
+    "questions_asked": [
+      "Expand: 2*(x + 3)",
+      "Solve: 2*x + 3 = 11",
+      "Expand: 4*(x - 2)",
+      "Solve: x + 5 = 12",
+      "Solve: x - 3 = 10"
+    ],
+    "student_responses": [
+      "2*x + 1 + 6",
+      "9.0",
+      "4*x - 8",
+      "11.0",
+      "17.0"
+    ],
+    "detected_errors": [
+      "incomplete_distribution",
+      "arithmetic_error",
+      "arithmetic_error",
+      "arithmetic_error"
+    ],
+    "engine_hypotheses": {
+      "MISCONCEPTION_incomplete_distribution": 0.057971014492753624,
+      "MISCONCEPTION_sign_negation_error": 0.057971014492753624,
+      "MISCONCEPTION_wrong_operation_order": 0.2898550724637681,
+      "PROCEDURAL_GAP": 0.17391304347826084,
+      "COMPUTATIONAL_ERROR": 0.36231884057971014,
+      "CARELESS_ERROR": 0.057971014492753624
+    },
+    "failure_reason": "Engine failed to reach conclusion within budget."
+  },
+  {
+    "student_id": "student_0075",
+    "archetype": "Sign Misconception",
+    "ground_truth": {
+      "category": "MISCONCEPTION",
+      "specific_cause": "sign_negation_error",
+      "affected_skills": [
+        "sign_manipulation"
+      ],
+      "secondary_causes": []
+    },
+    "engine_diagnosis": "INSUFFICIENT_EVIDENCE",
+    "engine_confidence": 0.0,
+    "correct": false,
+    "questions_used": 5,
+    "false_diagnosis": false,
+    "insufficient_evidence": true,
+    "questions_asked": [
+      "Expand: 2*(x + 3)",
+      "Expand: 3*(x + 5)",
+      "Expand: 4*(x + 2)",
+      "Expand: 4*(x - 2)",
+      "Solve: 2*x + 3 = 11"
+    ],
+    "student_responses": [
+      "2*x + 6",
+      "3*x + 15",
+      "4*x + 8",
+      "SIGN_ERROR",
+      "4"
+    ],
+    "detected_errors": [
+      "sign_error"
+    ],
+    "engine_hypotheses": {
+      "MISCONCEPTION_incomplete_distribution": 0.3676470588235293,
+      "MISCONCEPTION_sign_negation_error": 0.3676470588235293,
+      "MISCONCEPTION_wrong_operation_order": 0.07352941176470587,
+      "PROCEDURAL_GAP": 0.04411764705882352,
+      "COMPUTATIONAL_ERROR": 0.07352941176470587,
+      "CARELESS_ERROR": 0.07352941176470587
+    },
+    "failure_reason": "Engine failed to reach conclusion within budget."
+  },
+  {
+    "student_id": "student_0076",
+    "archetype": "Equation Solving Procedural Gap",
+    "ground_truth": {
+      "category": "PROCEDURAL_GAP",
+      "specific_cause": "wrong_operation_order",
+      "affected_skills": [
+        "linear_equations",
+        "inverse_operations"
+      ],
+      "secondary_causes": []
+    },
+    "engine_diagnosis": "INSUFFICIENT_EVIDENCE",
+    "engine_confidence": 0.0,
+    "correct": false,
+    "questions_used": 5,
+    "false_diagnosis": false,
+    "insufficient_evidence": true,
+    "questions_asked": [
+      "Expand: 2*(x + 3)",
+      "Expand: 3*(x + 5)",
+      "Expand: 4*(x + 2)",
+      "Expand: 4*(x - 2)",
+      "Expand: 5*(x - 3)"
+    ],
+    "student_responses": [
+      "2*x + 6",
+      "3*x + 15",
+      "4*x + 8",
+      "4*x - 8",
+      "5*x - 15"
+    ],
+    "detected_errors": [],
+    "engine_hypotheses": {},
+    "failure_reason": "Engine failed to reach conclusion within budget."
+  },
+  {
+    "student_id": "student_0077",
+    "archetype": "Careless Error Student",
+    "ground_truth": {
+      "category": "CARELESS_ERROR",
+      "specific_cause": null,
+      "affected_skills": [],
+      "secondary_causes": []
+    },
+    "engine_diagnosis": "INSUFFICIENT_EVIDENCE",
+    "engine_confidence": 0.0,
+    "correct": false,
+    "questions_used": 5,
+    "false_diagnosis": false,
+    "insufficient_evidence": true,
+    "questions_asked": [
+      "Expand: 2*(x + 3)",
+      "Solve: 2*x + 3 = 11",
+      "Expand: 2*(x + 3)",
+      "Simplify: 5 - (-3)",
+      "Expand: 4*(x - 2)"
+    ],
+    "student_responses": [
+      "2*x + 1 + 6",
+      "4",
+      "2*x + 6",
+      "8",
+      "4*x + 1 - 8"
+    ],
+    "detected_errors": [
+      "incomplete_distribution",
+      "unknown_error"
+    ],
+    "engine_hypotheses": {
+      "MISCONCEPTION_incomplete_distribution": 0.17857142857142858,
+      "MISCONCEPTION_sign_negation_error": 0.17857142857142855,
+      "MISCONCEPTION_wrong_operation_order": 0.17857142857142858,
+      "PROCEDURAL_GAP": 0.10714285714285714,
+      "COMPUTATIONAL_ERROR": 0.17857142857142858,
+      "CARELESS_ERROR": 0.17857142857142858
+    },
+    "failure_reason": "Engine failed to reach conclusion within budget."
+  },
+  {
+    "student_id": "student_0078",
+    "archetype": "Multiple Weaknesses",
+    "ground_truth": {
+      "category": "CONCEPTUAL_GAP",
+      "specific_cause": null,
+      "affected_skills": [
+        "distributive_property",
+        "integer_arithmetic",
+        "sign_manipulation",
+        "linear_equations",
+        "inverse_operations"
+      ],
+      "secondary_causes": []
+    },
+    "engine_diagnosis": "INSUFFICIENT_EVIDENCE",
+    "engine_confidence": 0.0,
+    "correct": false,
+    "questions_used": 5,
+    "false_diagnosis": false,
+    "insufficient_evidence": true,
+    "questions_asked": [
+      "Expand: 2*(x + 3)",
+      "Expand: 3*(x + 5)",
+      "Expand: 4*(x + 2)",
+      "Solve: 2*x + 3 = 11",
+      "Expand: 4*(x - 2)"
+    ],
+    "student_responses": [
+      "2*x + 6",
+      "3*x + 15",
+      "4*x + 1 + 8",
+      "6.0",
+      "4*x + 1 - 8"
+    ],
+    "detected_errors": [
+      "unknown_error",
+      "arithmetic_error",
+      "unknown_error"
+    ],
+    "engine_hypotheses": {
+      "MISCONCEPTION_incomplete_distribution": 0.25,
+      "MISCONCEPTION_sign_negation_error": 0.25,
+      "MISCONCEPTION_wrong_operation_order": 0.25,
+      "PROCEDURAL_GAP": 0.15,
+      "COMPUTATIONAL_ERROR": 0.05,
+      "CARELESS_ERROR": 0.05
+    },
+    "failure_reason": "Engine failed to reach conclusion within budget."
+  },
+  {
+    "student_id": "student_0079",
+    "archetype": "Insufficient Evidence",
+    "ground_truth": {
+      "category": "INSUFFICIENT_EVIDENCE",
+      "specific_cause": null,
+      "affected_skills": [],
+      "secondary_causes": []
+    },
+    "engine_diagnosis": "INSUFFICIENT_EVIDENCE",
+    "engine_confidence": 0.0,
+    "correct": true,
+    "questions_used": 5,
+    "false_diagnosis": false,
+    "insufficient_evidence": true,
+    "questions_asked": [
+      "Expand: 2*(x + 3)",
+      "Solve: 2*x + 3 = 11",
+      "Expand: 4*(x - 2)",
+      "Expand: -2*(x + 4)",
+      "Expand: 2*(x + 3)"
+    ],
+    "student_responses": [
+      "2*x + 1 + 6",
+      "5.0",
+      "4*x + 1 - 8",
+      "-2*x + 1 - 8",
+      "2*x + 1 + 6"
+    ],
+    "detected_errors": [
+      "incomplete_distribution",
+      "arithmetic_error",
+      "unknown_error",
+      "unknown_error",
+      "incomplete_distribution"
+    ],
+    "engine_hypotheses": {
+      "MISCONCEPTION_incomplete_distribution": 0.45454545454545453,
+      "MISCONCEPTION_sign_negation_error": 0.18181818181818182,
+      "MISCONCEPTION_wrong_operation_order": 0.18181818181818182,
+      "PROCEDURAL_GAP": 0.10909090909090909,
+      "COMPUTATIONAL_ERROR": 0.03636363636363637,
+      "CARELESS_ERROR": 0.03636363636363637
+    },
+    "failure_reason": null
+  },
+  {
+    "student_id": "student_0080",
+    "archetype": "Strong Student",
+    "ground_truth": {
+      "category": "CARELESS_ERROR",
+      "specific_cause": null,
+      "affected_skills": [],
+      "secondary_causes": []
+    },
+    "engine_diagnosis": "INSUFFICIENT_EVIDENCE",
+    "engine_confidence": 0.0,
+    "correct": false,
+    "questions_used": 5,
+    "false_diagnosis": false,
+    "insufficient_evidence": true,
+    "questions_asked": [
+      "Expand: 2*(x + 3)",
+      "Expand: 3*(x + 5)",
+      "Expand: 4*(x + 2)",
+      "Expand: 4*(x - 2)",
+      "Expand: 5*(x - 3)"
+    ],
+    "student_responses": [
+      "2*x + 6",
+      "3*x + 15",
+      "4*x + 8",
+      "4*x - 8",
+      "5*x - 15"
+    ],
+    "detected_errors": [],
+    "engine_hypotheses": {},
+    "failure_reason": "Engine failed to reach conclusion within budget."
+  },
+  {
+    "student_id": "student_0081",
+    "archetype": "Distributive Misconception",
+    "ground_truth": {
+      "category": "MISCONCEPTION",
+      "specific_cause": "incomplete_distribution",
+      "affected_skills": [
+        "distributive_property"
+      ],
+      "secondary_causes": []
+    },
+    "engine_diagnosis": "MISCONCEPTION",
+    "engine_confidence": 0.8389261744966443,
+    "correct": true,
+    "questions_used": 5,
+    "false_diagnosis": false,
+    "insufficient_evidence": false,
+    "questions_asked": [
+      "Expand: 2*(x + 3)",
+      "Solve: 2*x + 3 = 11",
+      "Expand: 4*(x - 2)",
+      "Expand: 2*(x + 3)",
+      "Expand: 5*(2*x + 1)"
+    ],
+    "student_responses": [
+      "2*x + 3",
+      "9.0",
+      "4*x - 2",
+      "2*x + 3",
+      "WRONG_INCOMPLETE_DIST"
+    ],
+    "detected_errors": [
+      "incomplete_distribution",
+      "arithmetic_error",
+      "incomplete_distribution",
+      "incomplete_distribution",
+      "incomplete_distribution"
+    ],
+    "engine_hypotheses": {
+      "MISCONCEPTION_incomplete_distribution": 0.8389261744966443,
+      "MISCONCEPTION_sign_negation_error": 0.05369127516778525,
+      "MISCONCEPTION_wrong_operation_order": 0.05369127516778525,
+      "PROCEDURAL_GAP": 0.032214765100671144,
+      "COMPUTATIONAL_ERROR": 0.01073825503355705,
+      "CARELESS_ERROR": 0.01073825503355705
+    },
+    "failure_reason": null
+  },
+  {
+    "student_id": "student_0082",
+    "archetype": "Arithmetic Weakness",
+    "ground_truth": {
+      "category": "COMPUTATIONAL_ERROR",
+      "specific_cause": null,
+      "affected_skills": [
+        "integer_arithmetic"
+      ],
+      "secondary_causes": []
+    },
+    "engine_diagnosis": "INSUFFICIENT_EVIDENCE",
+    "engine_confidence": 0.0,
+    "correct": false,
+    "questions_used": 5,
+    "false_diagnosis": false,
+    "insufficient_evidence": true,
+    "questions_asked": [
+      "Expand: 2*(x + 3)",
+      "Solve: 2*x + 3 = 11",
+      "Expand: 4*(x - 2)",
+      "Expand: -2*(x + 4)",
+      "Expand: 2*(x + 3)"
+    ],
+    "student_responses": [
+      "2*x + 1 + 6",
+      "5.0",
+      "4*x + 1 - 8",
+      "-2*x + 1 - 8",
+      "2*x + 1 + 6"
+    ],
+    "detected_errors": [
+      "incomplete_distribution",
+      "arithmetic_error",
+      "unknown_error",
+      "unknown_error",
+      "incomplete_distribution"
+    ],
+    "engine_hypotheses": {
+      "MISCONCEPTION_incomplete_distribution": 0.45454545454545453,
+      "MISCONCEPTION_sign_negation_error": 0.18181818181818182,
+      "MISCONCEPTION_wrong_operation_order": 0.18181818181818182,
+      "PROCEDURAL_GAP": 0.10909090909090909,
+      "COMPUTATIONAL_ERROR": 0.03636363636363637,
+      "CARELESS_ERROR": 0.03636363636363637
+    },
+    "failure_reason": "Engine failed to reach conclusion within budget."
+  },
+  {
+    "student_id": "student_0083",
+    "archetype": "Sign Misconception",
+    "ground_truth": {
+      "category": "MISCONCEPTION",
+      "specific_cause": "sign_negation_error",
+      "affected_skills": [
+        "sign_manipulation"
+      ],
+      "secondary_causes": []
+    },
+    "engine_diagnosis": "INSUFFICIENT_EVIDENCE",
+    "engine_confidence": 0.0,
+    "correct": false,
+    "questions_used": 5,
+    "false_diagnosis": false,
+    "insufficient_evidence": true,
+    "questions_asked": [
+      "Expand: 2*(x + 3)",
+      "Expand: 3*(x + 5)",
+      "Solve: 2*x + 3 = 11",
+      "Expand: 4*(x - 2)",
+      "Solve: x + 5 = 12"
+    ],
+    "student_responses": [
+      "2*x + 6",
+      "3*x + 1 + 15",
+      "7.0",
+      "4*x - 8",
+      "10.0"
+    ],
+    "detected_errors": [
+      "incomplete_distribution",
+      "arithmetic_error",
+      "arithmetic_error"
+    ],
+    "engine_hypotheses": {
+      "MISCONCEPTION_incomplete_distribution": 0.07407407407407408,
+      "MISCONCEPTION_sign_negation_error": 0.07407407407407408,
+      "MISCONCEPTION_wrong_operation_order": 0.3703703703703704,
+      "PROCEDURAL_GAP": 0.2222222222222222,
+      "COMPUTATIONAL_ERROR": 0.1851851851851852,
+      "CARELESS_ERROR": 0.07407407407407408
+    },
+    "failure_reason": "Engine failed to reach conclusion within budget."
+  },
+  {
+    "student_id": "student_0084",
+    "archetype": "Equation Solving Procedural Gap",
+    "ground_truth": {
+      "category": "PROCEDURAL_GAP",
+      "specific_cause": "wrong_operation_order",
+      "affected_skills": [
+        "linear_equations",
+        "inverse_operations"
+      ],
+      "secondary_causes": []
+    },
+    "engine_diagnosis": "INSUFFICIENT_EVIDENCE",
+    "engine_confidence": 0.0,
+    "correct": false,
+    "questions_used": 5,
+    "false_diagnosis": false,
+    "insufficient_evidence": true,
+    "questions_asked": [
+      "Expand: 2*(x + 3)",
+      "Expand: 3*(x + 5)",
+      "Expand: 4*(x + 2)",
+      "Expand: 4*(x - 2)",
+      "Expand: 5*(x - 3)"
+    ],
+    "student_responses": [
+      "2*x + 6",
+      "3*x + 15",
+      "4*x + 8",
+      "4*x - 8",
+      "5*x + 1 - 15"
+    ],
+    "detected_errors": [
+      "unknown_error"
+    ],
+    "engine_hypotheses": {
+      "MISCONCEPTION_incomplete_distribution": 0.25,
+      "MISCONCEPTION_sign_negation_error": 0.25,
+      "MISCONCEPTION_wrong_operation_order": 0.25,
+      "PROCEDURAL_GAP": 0.15,
+      "COMPUTATIONAL_ERROR": 0.05,
+      "CARELESS_ERROR": 0.05
+    },
+    "failure_reason": "Engine failed to reach conclusion within budget."
+  },
+  {
+    "student_id": "student_0085",
+    "archetype": "Careless Error Student",
+    "ground_truth": {
+      "category": "CARELESS_ERROR",
+      "specific_cause": null,
+      "affected_skills": [],
+      "secondary_causes": []
+    },
+    "engine_diagnosis": "INSUFFICIENT_EVIDENCE",
+    "engine_confidence": 0.0,
+    "correct": false,
+    "questions_used": 5,
+    "false_diagnosis": false,
+    "insufficient_evidence": true,
+    "questions_asked": [
+      "Expand: 2*(x + 3)",
+      "Expand: 3*(x + 5)",
+      "Expand: 4*(x + 2)",
+      "Solve: 2*x + 3 = 11",
+      "Expand: 4*(x - 2)"
+    ],
+    "student_responses": [
+      "2*x + 6",
+      "3*x + 15",
+      "4*x + 1 + 8",
+      "6.0",
+      "4*x - 8"
+    ],
+    "detected_errors": [
+      "unknown_error",
+      "arithmetic_error"
+    ],
+    "engine_hypotheses": {
+      "MISCONCEPTION_incomplete_distribution": 0.08333333333333333,
+      "MISCONCEPTION_sign_negation_error": 0.08333333333333333,
+      "MISCONCEPTION_wrong_operation_order": 0.41666666666666663,
+      "PROCEDURAL_GAP": 0.24999999999999994,
+      "COMPUTATIONAL_ERROR": 0.08333333333333333,
+      "CARELESS_ERROR": 0.08333333333333333
+    },
+    "failure_reason": "Engine failed to reach conclusion within budget."
+  },
+  {
+    "student_id": "student_0086",
+    "archetype": "Multiple Weaknesses",
+    "ground_truth": {
+      "category": "CONCEPTUAL_GAP",
+      "specific_cause": null,
+      "affected_skills": [
+        "distributive_property",
+        "integer_arithmetic",
+        "sign_manipulation",
+        "linear_equations",
+        "inverse_operations"
+      ],
+      "secondary_causes": []
+    },
+    "engine_diagnosis": "INSUFFICIENT_EVIDENCE",
+    "engine_confidence": 0.0,
+    "correct": false,
+    "questions_used": 5,
+    "false_diagnosis": false,
+    "insufficient_evidence": true,
+    "questions_asked": [
+      "Expand: 2*(x + 3)",
+      "Solve: 2*x + 3 = 11",
+      "Expand: 4*(x - 2)",
+      "Expand: -2*(x + 4)",
+      "Expand: 2*(x + 3)"
+    ],
+    "student_responses": [
+      "2*x + 1 + 6",
+      "5.0",
+      "4*x + 1 - 8",
+      "-2*x + 1 - 8",
+      "2*x + 6"
+    ],
+    "detected_errors": [
+      "incomplete_distribution",
+      "arithmetic_error",
+      "unknown_error",
+      "unknown_error"
+    ],
+    "engine_hypotheses": {
+      "MISCONCEPTION_incomplete_distribution": 0.06249999999999999,
+      "MISCONCEPTION_sign_negation_error": 0.31249999999999994,
+      "MISCONCEPTION_wrong_operation_order": 0.31249999999999994,
+      "PROCEDURAL_GAP": 0.18749999999999994,
+      "COMPUTATIONAL_ERROR": 0.06249999999999999,
+      "CARELESS_ERROR": 0.06249999999999999
+    },
+    "failure_reason": "Engine failed to reach conclusion within budget."
+  },
+  {
+    "student_id": "student_0087",
+    "archetype": "Insufficient Evidence",
+    "ground_truth": {
+      "category": "INSUFFICIENT_EVIDENCE",
+      "specific_cause": null,
+      "affected_skills": [],
+      "secondary_causes": []
+    },
+    "engine_diagnosis": "INSUFFICIENT_EVIDENCE",
+    "engine_confidence": 0.0,
+    "correct": true,
+    "questions_used": 5,
+    "false_diagnosis": false,
+    "insufficient_evidence": true,
+    "questions_asked": [
+      "Expand: 2*(x + 3)",
+      "Solve: 2*x + 3 = 11",
+      "Expand: 4*(x - 2)",
+      "Expand: -2*(x + 4)",
+      "Expand: 2*(x + 3)"
+    ],
+    "student_responses": [
+      "2*x + 1 + 6",
+      "8.0",
+      "4*x + 1 - 8",
+      "-2*x + 1 - 8",
+      "2*x + 1 + 6"
+    ],
+    "detected_errors": [
+      "incomplete_distribution",
+      "arithmetic_error",
+      "unknown_error",
+      "unknown_error",
+      "incomplete_distribution"
+    ],
+    "engine_hypotheses": {
+      "MISCONCEPTION_incomplete_distribution": 0.45454545454545453,
+      "MISCONCEPTION_sign_negation_error": 0.18181818181818182,
+      "MISCONCEPTION_wrong_operation_order": 0.18181818181818182,
+      "PROCEDURAL_GAP": 0.10909090909090909,
+      "COMPUTATIONAL_ERROR": 0.03636363636363637,
+      "CARELESS_ERROR": 0.03636363636363637
+    },
+    "failure_reason": null
+  },
+  {
+    "student_id": "student_0088",
+    "archetype": "Strong Student",
+    "ground_truth": {
+      "category": "CARELESS_ERROR",
+      "specific_cause": null,
+      "affected_skills": [],
+      "secondary_causes": []
+    },
+    "engine_diagnosis": "INSUFFICIENT_EVIDENCE",
+    "engine_confidence": 0.0,
+    "correct": false,
+    "questions_used": 5,
+    "false_diagnosis": false,
+    "insufficient_evidence": true,
+    "questions_asked": [
+      "Expand: 2*(x + 3)",
+      "Expand: 3*(x + 5)",
+      "Expand: 4*(x + 2)",
+      "Expand: 4*(x - 2)",
+      "Expand: 5*(x - 3)"
+    ],
+    "student_responses": [
+      "2*x + 6",
+      "3*x + 15",
+      "4*x + 8",
+      "4*x - 8",
+      "5*x - 15"
+    ],
+    "detected_errors": [],
+    "engine_hypotheses": {},
+    "failure_reason": "Engine failed to reach conclusion within budget."
+  },
+  {
+    "student_id": "student_0089",
+    "archetype": "Distributive Misconception",
+    "ground_truth": {
+      "category": "MISCONCEPTION",
+      "specific_cause": "incomplete_distribution",
+      "affected_skills": [
+        "distributive_property"
+      ],
+      "secondary_causes": []
+    },
+    "engine_diagnosis": "MISCONCEPTION",
+    "engine_confidence": 0.900835975785529,
+    "correct": true,
+    "questions_used": 5,
+    "false_diagnosis": false,
+    "insufficient_evidence": false,
+    "questions_asked": [
+      "Expand: 2*(x + 3)",
+      "Solve: 2*x + 3 = 11",
+      "Expand: 2*(x + 3)",
+      "Expand: 5*(2*x + 1)",
+      "Expand: 4*(x - 2)"
+    ],
+    "student_responses": [
+      "2*x + 3",
+      "4",
+      "2*x + 3",
+      "WRONG_INCOMPLETE_DIST",
+      "4*x - 2"
+    ],
+    "detected_errors": [
+      "incomplete_distribution",
+      "incomplete_distribution",
+      "incomplete_distribution",
+      "incomplete_distribution"
+    ],
+    "engine_hypotheses": {
+      "MISCONCEPTION_incomplete_distribution": 0.900835975785529,
+      "MISCONCEPTION_sign_negation_error": 0.057653502450273855,
+      "MISCONCEPTION_wrong_operation_order": 0.011530700490054769,
+      "PROCEDURAL_GAP": 0.006918420294032862,
+      "COMPUTATIONAL_ERROR": 0.011530700490054769,
+      "CARELESS_ERROR": 0.011530700490054769
+    },
+    "failure_reason": null
+  },
+  {
+    "student_id": "student_0090",
+    "archetype": "Arithmetic Weakness",
+    "ground_truth": {
+      "category": "COMPUTATIONAL_ERROR",
+      "specific_cause": null,
+      "affected_skills": [
+        "integer_arithmetic"
+      ],
+      "secondary_causes": []
+    },
+    "engine_diagnosis": "INSUFFICIENT_EVIDENCE",
+    "engine_confidence": 0.0,
+    "correct": false,
+    "questions_used": 5,
+    "false_diagnosis": false,
+    "insufficient_evidence": true,
+    "questions_asked": [
+      "Expand: 2*(x + 3)",
+      "Solve: 2*x + 3 = 11",
+      "Expand: 4*(x - 2)",
+      "Solve: x + 5 = 12",
+      "Solve: x - 3 = 10"
+    ],
+    "student_responses": [
+      "2*x + 1 + 6",
+      "8.0",
+      "4*x - 8",
+      "9.0",
+      "18.0"
+    ],
+    "detected_errors": [
+      "incomplete_distribution",
+      "arithmetic_error",
+      "arithmetic_error",
+      "arithmetic_error"
+    ],
+    "engine_hypotheses": {
+      "MISCONCEPTION_incomplete_distribution": 0.057971014492753624,
+      "MISCONCEPTION_sign_negation_error": 0.057971014492753624,
+      "MISCONCEPTION_wrong_operation_order": 0.2898550724637681,
+      "PROCEDURAL_GAP": 0.17391304347826084,
+      "COMPUTATIONAL_ERROR": 0.36231884057971014,
+      "CARELESS_ERROR": 0.057971014492753624
+    },
+    "failure_reason": "Engine failed to reach conclusion within budget."
+  },
+  {
+    "student_id": "student_0091",
+    "archetype": "Sign Misconception",
+    "ground_truth": {
+      "category": "MISCONCEPTION",
+      "specific_cause": "sign_negation_error",
+      "affected_skills": [
+        "sign_manipulation"
+      ],
+      "secondary_causes": []
+    },
+    "engine_diagnosis": "INSUFFICIENT_EVIDENCE",
+    "engine_confidence": 0.0,
+    "correct": false,
+    "questions_used": 5,
+    "false_diagnosis": false,
+    "insufficient_evidence": true,
+    "questions_asked": [
+      "Expand: 2*(x + 3)",
+      "Expand: 3*(x + 5)",
+      "Expand: 4*(x + 2)",
+      "Expand: 4*(x - 2)",
+      "Solve: 2*x + 3 = 11"
+    ],
+    "student_responses": [
+      "2*x + 6",
+      "3*x + 15",
+      "4*x + 8",
+      "SIGN_ERROR",
+      "6.0"
+    ],
+    "detected_errors": [
+      "sign_error",
+      "arithmetic_error"
+    ],
+    "engine_hypotheses": {
+      "MISCONCEPTION_incomplete_distribution": 0.25,
+      "MISCONCEPTION_sign_negation_error": 0.25,
+      "MISCONCEPTION_wrong_operation_order": 0.25,
+      "PROCEDURAL_GAP": 0.15,
+      "COMPUTATIONAL_ERROR": 0.05,
+      "CARELESS_ERROR": 0.05
+    },
+    "failure_reason": "Engine failed to reach conclusion within budget."
+  },
+  {
+    "student_id": "student_0092",
+    "archetype": "Equation Solving Procedural Gap",
+    "ground_truth": {
+      "category": "PROCEDURAL_GAP",
+      "specific_cause": "wrong_operation_order",
+      "affected_skills": [
+        "linear_equations",
+        "inverse_operations"
+      ],
+      "secondary_causes": []
+    },
+    "engine_diagnosis": "INSUFFICIENT_EVIDENCE",
+    "engine_confidence": 0.0,
+    "correct": false,
+    "questions_used": 5,
+    "false_diagnosis": false,
+    "insufficient_evidence": true,
+    "questions_asked": [
+      "Expand: 2*(x + 3)",
+      "Expand: 3*(x + 5)",
+      "Solve: 2*x + 3 = 11",
+      "Expand: 2*(x + 3)",
+      "Simplify: 5 - (-3)"
+    ],
+    "student_responses": [
+      "2*x + 6",
+      "3*x + 1 + 15",
+      "4",
+      "2*x + 6",
+      "8"
+    ],
+    "detected_errors": [
+      "incomplete_distribution"
+    ],
+    "engine_hypotheses": {
+      "MISCONCEPTION_incomplete_distribution": 0.17857142857142858,
+      "MISCONCEPTION_sign_negation_error": 0.17857142857142855,
+      "MISCONCEPTION_wrong_operation_order": 0.17857142857142858,
+      "PROCEDURAL_GAP": 0.10714285714285714,
+      "COMPUTATIONAL_ERROR": 0.17857142857142858,
+      "CARELESS_ERROR": 0.17857142857142858
+    },
+    "failure_reason": "Engine failed to reach conclusion within budget."
+  },
+  {
+    "student_id": "student_0093",
+    "archetype": "Careless Error Student",
+    "ground_truth": {
+      "category": "CARELESS_ERROR",
+      "specific_cause": null,
+      "affected_skills": [],
+      "secondary_causes": []
+    },
+    "engine_diagnosis": "INSUFFICIENT_EVIDENCE",
+    "engine_confidence": 0.0,
+    "correct": false,
+    "questions_used": 5,
+    "false_diagnosis": false,
+    "insufficient_evidence": true,
+    "questions_asked": [
+      "Expand: 2*(x + 3)",
+      "Solve: 2*x + 3 = 11",
+      "Expand: 4*(x - 2)",
+      "Expand: -2*(x + 4)",
+      "Expand: 2*(x + 3)"
+    ],
+    "student_responses": [
+      "2*x + 1 + 6",
+      "9.0",
+      "4*x + 1 - 8",
+      "-2*x + 1 - 8",
+      "2*x + 6"
+    ],
+    "detected_errors": [
+      "incomplete_distribution",
+      "arithmetic_error",
+      "unknown_error",
+      "unknown_error"
+    ],
+    "engine_hypotheses": {
+      "MISCONCEPTION_incomplete_distribution": 0.06249999999999999,
+      "MISCONCEPTION_sign_negation_error": 0.31249999999999994,
+      "MISCONCEPTION_wrong_operation_order": 0.31249999999999994,
+      "PROCEDURAL_GAP": 0.18749999999999994,
+      "COMPUTATIONAL_ERROR": 0.06249999999999999,
+      "CARELESS_ERROR": 0.06249999999999999
+    },
+    "failure_reason": "Engine failed to reach conclusion within budget."
+  },
+  {
+    "student_id": "student_0094",
+    "archetype": "Multiple Weaknesses",
+    "ground_truth": {
+      "category": "CONCEPTUAL_GAP",
+      "specific_cause": null,
+      "affected_skills": [
+        "distributive_property",
+        "integer_arithmetic",
+        "sign_manipulation",
+        "linear_equations",
+        "inverse_operations"
+      ],
+      "secondary_causes": []
+    },
+    "engine_diagnosis": "INSUFFICIENT_EVIDENCE",
+    "engine_confidence": 0.0,
+    "correct": false,
+    "questions_used": 5,
+    "false_diagnosis": false,
+    "insufficient_evidence": true,
+    "questions_asked": [
+      "Expand: 2*(x + 3)",
+      "Solve: 2*x + 3 = 11",
+      "Expand: 4*(x - 2)",
+      "Expand: -2*(x + 4)",
+      "Expand: 2*(x + 3)"
+    ],
+    "student_responses": [
+      "2*x + 1 + 6",
+      "7.0",
+      "4*x + 1 - 8",
+      "-2*x + 1 - 8",
+      "2*x + 1 + 6"
+    ],
+    "detected_errors": [
+      "incomplete_distribution",
+      "arithmetic_error",
+      "unknown_error",
+      "unknown_error",
+      "incomplete_distribution"
+    ],
+    "engine_hypotheses": {
+      "MISCONCEPTION_incomplete_distribution": 0.45454545454545453,
+      "MISCONCEPTION_sign_negation_error": 0.18181818181818182,
+      "MISCONCEPTION_wrong_operation_order": 0.18181818181818182,
+      "PROCEDURAL_GAP": 0.10909090909090909,
+      "COMPUTATIONAL_ERROR": 0.03636363636363637,
+      "CARELESS_ERROR": 0.03636363636363637
+    },
+    "failure_reason": "Engine failed to reach conclusion within budget."
+  },
+  {
+    "student_id": "student_0095",
+    "archetype": "Insufficient Evidence",
+    "ground_truth": {
+      "category": "INSUFFICIENT_EVIDENCE",
+      "specific_cause": null,
+      "affected_skills": [],
+      "secondary_causes": []
+    },
+    "engine_diagnosis": "INSUFFICIENT_EVIDENCE",
+    "engine_confidence": 0.0,
+    "correct": true,
+    "questions_used": 5,
+    "false_diagnosis": false,
+    "insufficient_evidence": true,
+    "questions_asked": [
+      "Expand: 2*(x + 3)",
+      "Solve: 2*x + 3 = 11",
+      "Expand: 4*(x - 2)",
+      "Solve: x + 5 = 12",
+      "Solve: x - 3 = 10"
+    ],
+    "student_responses": [
+      "2*x + 1 + 6",
+      "7.0",
+      "4*x - 8",
+      "9.0",
+      "13"
+    ],
+    "detected_errors": [
+      "incomplete_distribution",
+      "arithmetic_error",
+      "arithmetic_error"
+    ],
+    "engine_hypotheses": {
+      "MISCONCEPTION_incomplete_distribution": 0.10989010989010989,
+      "MISCONCEPTION_sign_negation_error": 0.10989010989010989,
+      "MISCONCEPTION_wrong_operation_order": 0.5494505494505494,
+      "PROCEDURAL_GAP": 0.06593406593406592,
+      "COMPUTATIONAL_ERROR": 0.054945054945054944,
+      "CARELESS_ERROR": 0.10989010989010989
+    },
+    "failure_reason": null
+  },
+  {
+    "student_id": "student_0096",
+    "archetype": "Strong Student",
+    "ground_truth": {
+      "category": "CARELESS_ERROR",
+      "specific_cause": null,
+      "affected_skills": [],
+      "secondary_causes": []
+    },
+    "engine_diagnosis": "INSUFFICIENT_EVIDENCE",
+    "engine_confidence": 0.0,
+    "correct": false,
+    "questions_used": 5,
+    "false_diagnosis": false,
+    "insufficient_evidence": true,
+    "questions_asked": [
+      "Expand: 2*(x + 3)",
+      "Expand: 3*(x + 5)",
+      "Expand: 4*(x + 2)",
+      "Expand: 4*(x - 2)",
+      "Expand: 5*(x - 3)"
+    ],
+    "student_responses": [
+      "2*x + 6",
+      "3*x + 15",
+      "4*x + 8",
+      "4*x - 8",
+      "5*x - 15"
+    ],
+    "detected_errors": [],
+    "engine_hypotheses": {},
+    "failure_reason": "Engine failed to reach conclusion within budget."
+  },
+  {
+    "student_id": "student_0097",
+    "archetype": "Distributive Misconception",
+    "ground_truth": {
+      "category": "MISCONCEPTION",
+      "specific_cause": "incomplete_distribution",
+      "affected_skills": [
+        "distributive_property"
+      ],
+      "secondary_causes": []
+    },
+    "engine_diagnosis": "MISCONCEPTION",
+    "engine_confidence": 0.8389261744966443,
+    "correct": true,
+    "questions_used": 5,
+    "false_diagnosis": false,
+    "insufficient_evidence": false,
+    "questions_asked": [
+      "Expand: 2*(x + 3)",
+      "Solve: 2*x + 3 = 11",
+      "Expand: 4*(x - 2)",
+      "Expand: 2*(x + 3)",
+      "Expand: 5*(2*x + 1)"
+    ],
+    "student_responses": [
+      "2*x + 3",
+      "5.0",
+      "4*x - 2",
+      "2*x + 3",
+      "WRONG_INCOMPLETE_DIST"
+    ],
+    "detected_errors": [
+      "incomplete_distribution",
+      "arithmetic_error",
+      "incomplete_distribution",
+      "incomplete_distribution",
+      "incomplete_distribution"
+    ],
+    "engine_hypotheses": {
+      "MISCONCEPTION_incomplete_distribution": 0.8389261744966443,
+      "MISCONCEPTION_sign_negation_error": 0.05369127516778525,
+      "MISCONCEPTION_wrong_operation_order": 0.05369127516778525,
+      "PROCEDURAL_GAP": 0.032214765100671144,
+      "COMPUTATIONAL_ERROR": 0.01073825503355705,
+      "CARELESS_ERROR": 0.01073825503355705
+    },
+    "failure_reason": null
+  },
+  {
+    "student_id": "student_0098",
+    "archetype": "Arithmetic Weakness",
+    "ground_truth": {
+      "category": "COMPUTATIONAL_ERROR",
+      "specific_cause": null,
+      "affected_skills": [
+        "integer_arithmetic"
+      ],
+      "secondary_causes": []
+    },
+    "engine_diagnosis": "INSUFFICIENT_EVIDENCE",
+    "engine_confidence": 0.0,
+    "correct": false,
+    "questions_used": 5,
+    "false_diagnosis": false,
+    "insufficient_evidence": true,
+    "questions_asked": [
+      "Expand: 2*(x + 3)",
+      "Solve: 2*x + 3 = 11",
+      "Expand: 4*(x - 2)",
+      "Solve: x + 5 = 12",
+      "Solve: x - 3 = 10"
+    ],
+    "student_responses": [
+      "2*x + 1 + 6",
+      "5.0",
+      "4*x - 8",
+      "10.0",
+      "14.0"
+    ],
+    "detected_errors": [
+      "incomplete_distribution",
+      "arithmetic_error",
+      "arithmetic_error",
+      "arithmetic_error"
+    ],
+    "engine_hypotheses": {
+      "MISCONCEPTION_incomplete_distribution": 0.057971014492753624,
+      "MISCONCEPTION_sign_negation_error": 0.057971014492753624,
+      "MISCONCEPTION_wrong_operation_order": 0.2898550724637681,
+      "PROCEDURAL_GAP": 0.17391304347826084,
+      "COMPUTATIONAL_ERROR": 0.36231884057971014,
+      "CARELESS_ERROR": 0.057971014492753624
+    },
+    "failure_reason": "Engine failed to reach conclusion within budget."
+  },
+  {
+    "student_id": "student_0099",
+    "archetype": "Sign Misconception",
+    "ground_truth": {
+      "category": "MISCONCEPTION",
+      "specific_cause": "sign_negation_error",
+      "affected_skills": [
+        "sign_manipulation"
+      ],
+      "secondary_causes": []
+    },
+    "engine_diagnosis": "INSUFFICIENT_EVIDENCE",
+    "engine_confidence": 0.0,
+    "correct": false,
+    "questions_used": 5,
+    "false_diagnosis": false,
+    "insufficient_evidence": true,
+    "questions_asked": [
+      "Expand: 2*(x + 3)",
+      "Expand: 3*(x + 5)",
+      "Solve: 2*x + 3 = 11",
+      "Expand: 2*(x + 3)",
+      "Simplify: 5 - (-3)"
+    ],
+    "student_responses": [
+      "2*x + 6",
+      "3*x + 1 + 15",
+      "4",
+      "2*x + 6",
+      "SIGN_ERROR"
+    ],
+    "detected_errors": [
+      "incomplete_distribution",
+      "sign_error"
+    ],
+    "engine_hypotheses": {
+      "MISCONCEPTION_incomplete_distribution": 0.058479532163742694,
+      "MISCONCEPTION_sign_negation_error": 0.7309941520467835,
+      "MISCONCEPTION_wrong_operation_order": 0.058479532163742694,
+      "PROCEDURAL_GAP": 0.03508771929824561,
+      "COMPUTATIONAL_ERROR": 0.058479532163742694,
+      "CARELESS_ERROR": 0.058479532163742694
+    },
+    "failure_reason": "Engine failed to reach conclusion within budget."
+  }
+]

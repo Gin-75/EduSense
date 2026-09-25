@@ -1,0 +1,508 @@
+[
+  {
+    "id": 1,
+    "content": "Expand: 2*(x + 3)",
+    "structural_family": "dist_positive",
+    "dp": {
+      "tests": [
+        "distributive_property"
+      ],
+      "outcomes": {
+        "incomplete_distribution": {
+          "supports": [
+            "MISCONCEPTION_incomplete_distribution"
+          ]
+        },
+        "correct": {
+          "weakens": [
+            "MISCONCEPTION_incomplete_distribution",
+            "CONCEPTUAL_GAP"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "id": 2,
+    "content": "Expand: 3*(x + 5)",
+    "structural_family": "dist_positive",
+    "dp": {
+      "tests": [
+        "distributive_property"
+      ],
+      "outcomes": {
+        "incomplete_distribution": {
+          "supports": [
+            "MISCONCEPTION_incomplete_distribution"
+          ]
+        },
+        "correct": {
+          "weakens": [
+            "MISCONCEPTION_incomplete_distribution",
+            "CONCEPTUAL_GAP"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "id": 3,
+    "content": "Expand: 4*(x + 2)",
+    "structural_family": "dist_positive",
+    "dp": {
+      "tests": [
+        "distributive_property"
+      ],
+      "outcomes": {
+        "incomplete_distribution": {
+          "supports": [
+            "MISCONCEPTION_incomplete_distribution"
+          ]
+        },
+        "correct": {
+          "weakens": [
+            "MISCONCEPTION_incomplete_distribution",
+            "CONCEPTUAL_GAP"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "id": 4,
+    "content": "Expand: 4*(x - 2)",
+    "structural_family": "dist_negative",
+    "dp": {
+      "tests": [
+        "distributive_property",
+        "sign_manipulation"
+      ],
+      "outcomes": {
+        "incomplete_distribution": {
+          "supports": [
+            "MISCONCEPTION_incomplete_distribution"
+          ]
+        },
+        "sign_error": {
+          "supports": [
+            "MISCONCEPTION_sign_negation_error"
+          ]
+        },
+        "correct": {
+          "weakens": [
+            "MISCONCEPTION_incomplete_distribution",
+            "MISCONCEPTION_sign_negation_error"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "id": 5,
+    "content": "Expand: 5*(x - 3)",
+    "structural_family": "dist_negative",
+    "dp": {
+      "tests": [
+        "distributive_property",
+        "sign_manipulation"
+      ],
+      "outcomes": {
+        "incomplete_distribution": {
+          "supports": [
+            "MISCONCEPTION_incomplete_distribution"
+          ]
+        },
+        "sign_error": {
+          "supports": [
+            "MISCONCEPTION_sign_negation_error"
+          ]
+        },
+        "correct": {
+          "weakens": [
+            "MISCONCEPTION_incomplete_distribution",
+            "MISCONCEPTION_sign_negation_error"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "id": 6,
+    "content": "Expand: -2*(x + 4)",
+    "structural_family": "dist_neg_coeff",
+    "dp": {
+      "tests": [
+        "distributive_property",
+        "sign_manipulation"
+      ],
+      "outcomes": {
+        "incomplete_distribution": {
+          "supports": [
+            "MISCONCEPTION_incomplete_distribution"
+          ]
+        },
+        "sign_error": {
+          "supports": [
+            "MISCONCEPTION_sign_negation_error"
+          ]
+        },
+        "correct": {
+          "weakens": [
+            "MISCONCEPTION_incomplete_distribution",
+            "MISCONCEPTION_sign_negation_error"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "id": 7,
+    "content": "Expand: -3*(x - 2)",
+    "structural_family": "dist_neg_coeff",
+    "dp": {
+      "tests": [
+        "distributive_property",
+        "sign_manipulation"
+      ],
+      "outcomes": {
+        "incomplete_distribution": {
+          "supports": [
+            "MISCONCEPTION_incomplete_distribution"
+          ]
+        },
+        "sign_error": {
+          "supports": [
+            "MISCONCEPTION_sign_negation_error"
+          ]
+        },
+        "correct": {
+          "weakens": [
+            "MISCONCEPTION_incomplete_distribution",
+            "MISCONCEPTION_sign_negation_error"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "id": 8,
+    "content": "Expand: 5*(2*x + 1)",
+    "structural_family": "dist_coeff_x",
+    "dp": {
+      "tests": [
+        "distributive_property"
+      ],
+      "outcomes": {
+        "incomplete_distribution": {
+          "supports": [
+            "MISCONCEPTION_incomplete_distribution"
+          ]
+        },
+        "correct": {
+          "weakens": [
+            "MISCONCEPTION_incomplete_distribution"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "id": 9,
+    "content": "Expand: 2*(3*x - 2)",
+    "structural_family": "dist_coeff_x",
+    "dp": {
+      "tests": [
+        "distributive_property"
+      ],
+      "outcomes": {
+        "incomplete_distribution": {
+          "supports": [
+            "MISCONCEPTION_incomplete_distribution"
+          ]
+        },
+        "correct": {
+          "weakens": [
+            "MISCONCEPTION_incomplete_distribution"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "id": 10,
+    "content": "Solve: x + 5 = 12",
+    "structural_family": "lin_eq_add",
+    "dp": {
+      "tests": [
+        "linear_equations",
+        "integer_arithmetic"
+      ],
+      "outcomes": {
+        "wrong_op_error": {
+          "supports": [
+            "PROCEDURAL_GAP"
+          ]
+        },
+        "arithmetic_error": {
+          "supports": [
+            "COMPUTATIONAL_ERROR"
+          ]
+        },
+        "correct": {
+          "weakens": [
+            "PROCEDURAL_GAP",
+            "COMPUTATIONAL_ERROR"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "id": 11,
+    "content": "Solve: x + 7 = 15",
+    "structural_family": "lin_eq_add",
+    "dp": {
+      "tests": [
+        "linear_equations",
+        "integer_arithmetic"
+      ],
+      "outcomes": {
+        "wrong_op_error": {
+          "supports": [
+            "PROCEDURAL_GAP"
+          ]
+        },
+        "arithmetic_error": {
+          "supports": [
+            "COMPUTATIONAL_ERROR"
+          ]
+        },
+        "correct": {
+          "weakens": [
+            "PROCEDURAL_GAP",
+            "COMPUTATIONAL_ERROR"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "id": 12,
+    "content": "Solve: x - 3 = 10",
+    "structural_family": "lin_eq_sub",
+    "dp": {
+      "tests": [
+        "linear_equations",
+        "integer_arithmetic"
+      ],
+      "outcomes": {
+        "wrong_op_error": {
+          "supports": [
+            "PROCEDURAL_GAP"
+          ]
+        },
+        "arithmetic_error": {
+          "supports": [
+            "COMPUTATIONAL_ERROR"
+          ]
+        },
+        "correct": {
+          "weakens": [
+            "PROCEDURAL_GAP",
+            "COMPUTATIONAL_ERROR"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "id": 13,
+    "content": "Solve: 2*x + 3 = 11",
+    "structural_family": "lin_eq_mult",
+    "dp": {
+      "tests": [
+        "linear_equations",
+        "inverse_operations"
+      ],
+      "outcomes": {
+        "wrong_op_error": {
+          "supports": [
+            "PROCEDURAL_GAP",
+            "MISCONCEPTION_wrong_operation_order"
+          ]
+        },
+        "correct": {
+          "weakens": [
+            "PROCEDURAL_GAP",
+            "MISCONCEPTION_wrong_operation_order"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "id": 14,
+    "content": "Solve: 3*x + 5 = 20",
+    "structural_family": "lin_eq_mult",
+    "dp": {
+      "tests": [
+        "linear_equations",
+        "inverse_operations"
+      ],
+      "outcomes": {
+        "wrong_op_error": {
+          "supports": [
+            "PROCEDURAL_GAP",
+            "MISCONCEPTION_wrong_operation_order"
+          ]
+        },
+        "correct": {
+          "weakens": [
+            "PROCEDURAL_GAP",
+            "MISCONCEPTION_wrong_operation_order"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "id": 15,
+    "content": "Solve: 4*x - 2 = 14",
+    "structural_family": "lin_eq_mult",
+    "dp": {
+      "tests": [
+        "linear_equations",
+        "inverse_operations"
+      ],
+      "outcomes": {
+        "wrong_op_error": {
+          "supports": [
+            "PROCEDURAL_GAP",
+            "MISCONCEPTION_wrong_operation_order"
+          ]
+        },
+        "correct": {
+          "weakens": [
+            "PROCEDURAL_GAP",
+            "MISCONCEPTION_wrong_operation_order"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "id": 16,
+    "content": "Simplify: 5 - (-3)",
+    "structural_family": "sign_sub_neg",
+    "dp": {
+      "tests": [
+        "sign_manipulation",
+        "integer_arithmetic"
+      ],
+      "outcomes": {
+        "sign_error": {
+          "supports": [
+            "MISCONCEPTION_sign_negation_error"
+          ]
+        },
+        "correct": {
+          "weakens": [
+            "MISCONCEPTION_sign_negation_error"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "id": 17,
+    "content": "Simplify: 10 - (-2)",
+    "structural_family": "sign_sub_neg",
+    "dp": {
+      "tests": [
+        "sign_manipulation",
+        "integer_arithmetic"
+      ],
+      "outcomes": {
+        "sign_error": {
+          "supports": [
+            "MISCONCEPTION_sign_negation_error"
+          ]
+        },
+        "correct": {
+          "weakens": [
+            "MISCONCEPTION_sign_negation_error"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "id": 18,
+    "content": "Simplify: -4 - (-4)",
+    "structural_family": "sign_sub_neg",
+    "dp": {
+      "tests": [
+        "sign_manipulation",
+        "integer_arithmetic"
+      ],
+      "outcomes": {
+        "sign_error": {
+          "supports": [
+            "MISCONCEPTION_sign_negation_error"
+          ]
+        },
+        "correct": {
+          "weakens": [
+            "MISCONCEPTION_sign_negation_error"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "id": 19,
+    "content": "Simplify: -5 + 3",
+    "structural_family": "sign_add",
+    "dp": {
+      "tests": [
+        "sign_manipulation",
+        "integer_arithmetic"
+      ],
+      "outcomes": {
+        "sign_error": {
+          "supports": [
+            "MISCONCEPTION_sign_negation_error"
+          ]
+        },
+        "correct": {
+          "weakens": [
+            "MISCONCEPTION_sign_negation_error"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "id": 20,
+    "content": "Simplify: -7 - 2",
+    "structural_family": "sign_add",
+    "dp": {
+      "tests": [
+        "sign_manipulation",
+        "integer_arithmetic"
+      ],
+      "outcomes": {
+        "sign_error": {
+          "supports": [
+            "MISCONCEPTION_sign_negation_error"
+          ]
+        },
+        "correct": {
+          "weakens": [
+            "MISCONCEPTION_sign_negation_error"
+          ]
+        }
+      }
+    }
+  }
+]

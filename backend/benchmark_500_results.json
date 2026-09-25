@@ -1,0 +1,60 @@
+{
+  "engine_metrics": {
+    "total_students": 500,
+    "category_accuracy": 0.252,
+    "specific_root_cause_accuracy": 0.252,
+    "false_diagnosis_rate": 0.0,
+    "insufficient_evidence_rate": 0.872,
+    "average_questions": 5.0,
+    "median_questions": 5,
+    "confidence_when_correct": 0.4439244453206857,
+    "confidence_when_wrong": 0.0,
+    "per_archetype": {
+      "Strong Student": {
+        "accuracy": 0.0,
+        "avg_questions": 5.0,
+        "total": 63
+      },
+      "Arithmetic Weakness": {
+        "accuracy": 0.0,
+        "avg_questions": 5.0,
+        "total": 63
+      },
+      "Careless Error Student": {
+        "accuracy": 0.0,
+        "avg_questions": 5.0,
+        "total": 62
+      },
+      "Multiple Weaknesses": {
+        "accuracy": 0.0,
+        "avg_questions": 5.0,
+        "total": 62
+      },
+      "Equation Solving Procedural Gap": {
+        "accuracy": 0.0,
+        "avg_questions": 5.0,
+        "total": 62
+      },
+      "Distributive Misconception": {
+        "accuracy": 0.7301587301587301,
+        "avg_questions": 5.0,
+        "total": 63
+      },
+      "Insufficient Evidence": {
+        "accuracy": 1.0,
+        "avg_questions": 5.0,
+        "total": 62
+      },
+      "Sign Misconception": {
+        "accuracy": 0.2857142857142857,
+        "avg_questions": 5.0,
+        "total": 63
+      }
+    },
+    "accuracy_after_Q1": 0.0,
+    "accuracy_after_Q2": 0.0,
+    "accuracy_after_Q3": 0.0,
+    "accuracy_after_Q4": 0.0,
+    "accuracy_after_Q5": 0.252
+  }
+}
